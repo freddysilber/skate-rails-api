@@ -1,5 +1,7 @@
 # S.K.A.T.E API
 
+This repo needs to be named to skate-rails-api
+
 ## TODO
 
 1. create skaters in game
