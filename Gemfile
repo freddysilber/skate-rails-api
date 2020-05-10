@@ -21,7 +21,7 @@ gem 'bcrypt', '~> 3.1.7'
 # Used for debugging ruby code
 gem 'pry'
 # Used for parsing rails models into json
-gem 'fast_jsonapi'
+# gem 'fast_jsonapi'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
