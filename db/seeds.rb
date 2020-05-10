@@ -12,6 +12,10 @@ Skater.create(
 		{first_name: 'Freddy', last_name: 'Silber'},
 		{first_name: 'Martin', last_name: 'Stohr'},
 		{first_name: 'Ricky', last_name: 'Bugos'},
-		{first_name: 'Sam', last_name: 'Gold'}
+		{first_name: 'Lydia', last_name: 'Silber'},
+		{first_name: 'Quinn', last_name: 'Ailes'},
+		{first_name: 'Harry', last_name: 'Lietzke'},
+		{first_name: 'Abe', last_name: 'Lietzke'},
+		{first_name: 'Birk', last_name: 'Irving'}
 	]
 )
