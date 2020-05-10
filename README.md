@@ -9,3 +9,6 @@
 		b. players lost / setter
 		c. players won / setter
 		d. first player setter
+
+
+https://sk8-api.herokuapp.com/api/v1/skaters
