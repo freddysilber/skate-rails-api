@@ -1,5 +1,10 @@
 task :setup do 
 	puts 'RAKE SETUP'
+	# exec 'Set Up Heroku Deployment Steps Here?'
+
+
+
+	
 	# exec 'rails db:drop && rails db:create && rails db:migrate && rails db:seed && rails s'
 
 	# exec 'rails db:drop'
