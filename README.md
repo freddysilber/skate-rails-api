@@ -13,6 +13,6 @@
 
 
 
-To get to this url, I ram heroku login, heroku run rake db:migrate, heroku open
+To get to this url, I ram heroku login, heroku run rake db:migrate, heroku open, heroku run rake db:seed
 
 https://sk8-api.herokuapp.com/api/v1/skaters
