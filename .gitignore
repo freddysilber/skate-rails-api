@@ -1,2 +1,7 @@
-# Ignore 'TMP' rails folder
+# Ignore all logfiles and tempfiles
+/log/*
+!/log/.keep
+/log/*.log
+/tmp
 tmp
+log
