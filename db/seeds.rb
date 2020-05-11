@@ -6,6 +6,9 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+# Delete all skaters in database
+Skater.delete_all
+# Create some skaters
 Skater.create(
 	[
 		{first_name: 'CJ', last_name: 'Stohr', stance: 'Regular'},
