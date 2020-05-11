@@ -3,6 +3,7 @@ class CreateSkaters < ActiveRecord::Migration[6.0]
     create_table :skaters do |t|
       t.string :first_name
       t.string :last_name
+      t.string :stance
 
       t.timestamps
     end
