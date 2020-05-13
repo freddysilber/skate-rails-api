@@ -1,20 +1,27 @@
 # S.K.A.T.E API
+Rails API to store data to play a virtual game of skate
 
-This repo needs to be named to skate-rails-api
+## Models
+### Skater
+Attributes: Name, Stance
 
-## TODO
+### Trick
+Attributes: Name
+Relationships: has_many :variants, has_many :types, has_many :stances, has_many :types
 
-1. create skaters in game
-2. create game - model
-	#### it has...
-		a. a trick setter
-		b. players lost / setter
-		c. players won / setter
-		d. first player setter
+### Variant
+Attributes: Frontside, Backside
+Relationships: belongs_to :trick
 
+### Stance
+Attributes: Name
+Relationships: belongs_to :skater, belongs_to :trick
 
+### Type
+Attributes: Name
+Relationships: belongs_to :trick
 
-
+## Get Started
 To get to this url, I ran heroku login, heroku run rake db:migrate, heroku open, heroku run rake db:seed
 
-https://sk8-api.herokuapp.com/api/v1/skaters
+Source API: https://sk8-api.herokuapp.com/api/v1/skaters

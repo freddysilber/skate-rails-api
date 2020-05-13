@@ -8,6 +8,7 @@
 
 # Delete all skaters in database
 Skater.delete_all
+Trick.delete_all
 # Create some skaters
 Skater.create(
 	[
@@ -20,5 +21,14 @@ Skater.create(
 		{first_name: 'Harry', last_name: 'Lietzke', stance: 'Goofy'},
 		{first_name: 'Abe', last_name: 'Lietzke', stance: 'Goofy'},
 		{first_name: 'Birk', last_name: 'Irving', stance: 'Regular'}
+	]
+)
+
+Trick.create(
+	[
+		{name: 'Kickflip'},
+		{name: 'Heelflip'},
+		{name: 'Ollie'},
+		{}
 	]
 )
