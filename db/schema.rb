@@ -18,13 +18,14 @@ ActiveRecord::Schema.define(version: 2020_05_13_180136) do
   create_table "skaters", force: :cascade do |t|
     t.string "first_name"
     t.string "last_name"
-    t.string "stance"
+    t.integer "stance_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "stances", force: :cascade do |t|
     t.string "name"
+    t.integer "skater_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

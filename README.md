@@ -4,6 +4,7 @@ Rails API to store data to play a virtual game of skate
 ## Models
 ### Skater
 Attributes: First Name, Last Name, Stance
+Relationships: has_one :stance
 
 ### Trick
 Attributes: Name
