@@ -1,3 +1,3 @@
 class Variant < ApplicationRecord
-	belongs_to :trick
+	# belongs_to :trick
 end

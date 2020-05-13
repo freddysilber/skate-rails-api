@@ -3,8 +3,8 @@ class Api::V1::StancesController < ApplicationController
 
   # GET /stances
   def index
-    stances = Stance.all
-    render json: StanceSerializer.new(stance)
+    @stances = Stance.all
+    render json: StanceSerializer.new(@stances)
   end
 
   # GET /stances/1

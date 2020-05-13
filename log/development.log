@@ -4778,3 +4778,326 @@ Processing by Api::V1::SkatersController#index as HTML
 Completed 200 OK in 15ms (Views: 8.4ms | ActiveRecord: 4.7ms | Allocations: 8143)
 
 
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (30.4ms)[0m  [1m[35mDROP DATABASE IF EXISTS "skate_api_development"[0m
+  [1m[35m (31.3ms)[0m  [1m[35mDROP DATABASE IF EXISTS "skate_api_test"[0m
+  [1m[35m (97.9ms)[0m  [1m[35mCREATE DATABASE "skate_api_development" ENCODING = 'unicode'[0m
+  [1m[35m (106.5ms)[0m  [1m[35mCREATE DATABASE "skate_api_test" ENCODING = 'unicode'[0m
+  [1m[35m (4.4ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (2.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7080527816319185865)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateSkaters (20200510032316)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (2.6ms)[0m  [1m[35mCREATE TABLE "skaters" ("id" bigserial primary key, "first_name" character varying, "last_name" character varying, "stance_id" integer, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200510032316"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateTricks (20200513165940)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (2.3ms)[0m  [1m[35mCREATE TABLE "tricks" ("id" bigserial primary key, "name" character varying, "variant" character varying, "type" character varying, "stance" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200513165940"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateStances (20200513180052)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (2.1ms)[0m  [1m[35mCREATE TABLE "stances" ("id" bigserial primary key, "name" character varying, "skater_id" integer, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200513180052"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateVariants (20200513180116)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (3.0ms)[0m  [1m[35mCREATE TABLE "variants" ("id" bigserial primary key, "name" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200513180116"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateTypes (20200513180136)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (2.4ms)[0m  [1m[35mCREATE TABLE "types" ("id" bigserial primary key, "name" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200513180136"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-05-13 19:35:30.791524"], ["updated_at", "2020-05-13 19:35:30.791524"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(7080527816319185865)[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSkater Create (0.7ms)[0m  [1m[32mINSERT INTO "skaters" ("first_name", "last_name", "stance_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["first_name", "TEST SKATER"], ["last_name", "BUDDY GUY"], ["stance_id", 1], ["created_at", "2020-05-13 19:35:32.263909"], ["updated_at", "2020-05-13 19:35:32.263909"]]
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSkater Create (0.3ms)[0m  [1m[32mINSERT INTO "skaters" ("first_name", "last_name", "stance_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["first_name", "CJ"], ["last_name", "Stohr"], ["stance_id", 1], ["created_at", "2020-05-13 19:35:32.269120"], ["updated_at", "2020-05-13 19:35:32.269120"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSkater Create (0.2ms)[0m  [1m[32mINSERT INTO "skaters" ("first_name", "last_name", "stance_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["first_name", "Freddy"], ["last_name", "Silber"], ["stance_id", 1], ["created_at", "2020-05-13 19:35:32.272451"], ["updated_at", "2020-05-13 19:35:32.272451"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSkater Create (0.2ms)[0m  [1m[32mINSERT INTO "skaters" ("first_name", "last_name", "stance_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["first_name", "Martin"], ["last_name", "Stohr"], ["stance_id", 2], ["created_at", "2020-05-13 19:35:32.275477"], ["updated_at", "2020-05-13 19:35:32.275477"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSkater Create (0.2ms)[0m  [1m[32mINSERT INTO "skaters" ("first_name", "last_name", "stance_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["first_name", "Ricky"], ["last_name", "Bugos"], ["stance_id", 1], ["created_at", "2020-05-13 19:35:32.278388"], ["updated_at", "2020-05-13 19:35:32.278388"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSkater Create (0.2ms)[0m  [1m[32mINSERT INTO "skaters" ("first_name", "last_name", "stance_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["first_name", "Lydia"], ["last_name", "Silber"], ["stance_id", 1], ["created_at", "2020-05-13 19:35:32.281132"], ["updated_at", "2020-05-13 19:35:32.281132"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSkater Create (0.2ms)[0m  [1m[32mINSERT INTO "skaters" ("first_name", "last_name", "stance_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["first_name", "Quinn"], ["last_name", "Ailes"], ["stance_id", 2], ["created_at", "2020-05-13 19:35:32.284019"], ["updated_at", "2020-05-13 19:35:32.284019"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSkater Create (0.2ms)[0m  [1m[32mINSERT INTO "skaters" ("first_name", "last_name", "stance_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["first_name", "Harry"], ["last_name", "Lietzke"], ["stance_id", 2], ["created_at", "2020-05-13 19:35:32.286871"], ["updated_at", "2020-05-13 19:35:32.286871"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSkater Create (0.2ms)[0m  [1m[32mINSERT INTO "skaters" ("first_name", "last_name", "stance_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["first_name", "Abe"], ["last_name", "Lietzke"], ["stance_id", 2], ["created_at", "2020-05-13 19:35:32.289611"], ["updated_at", "2020-05-13 19:35:32.289611"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSkater Create (0.2ms)[0m  [1m[32mINSERT INTO "skaters" ("first_name", "last_name", "stance_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["first_name", "Birk"], ["last_name", "Irving"], ["stance_id", 1], ["created_at", "2020-05-13 19:35:32.307281"], ["updated_at", "2020-05-13 19:35:32.307281"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTrick Create (0.5ms)[0m  [1m[32mINSERT INTO "tricks" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Kickflip"], ["created_at", "2020-05-13 19:35:32.317570"], ["updated_at", "2020-05-13 19:35:32.317570"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTrick Create (0.2ms)[0m  [1m[32mINSERT INTO "tricks" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Heelflip"], ["created_at", "2020-05-13 19:35:32.321047"], ["updated_at", "2020-05-13 19:35:32.321047"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTrick Create (0.2ms)[0m  [1m[32mINSERT INTO "tricks" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Ollie"], ["created_at", "2020-05-13 19:35:32.323665"], ["updated_at", "2020-05-13 19:35:32.323665"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/api/v1/skaters" for ::1 at 2020-05-13 13:35:36 -0600
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::SkatersController#index as HTML
+  [1m[36mSkater Load (0.5ms)[0m  [1m[34mSELECT "skaters".* FROM "skaters"[0m
+  ↳ app/controllers/api/v1/skaters_controller.rb:7:in `index'
+Completed 200 OK in 13ms (Views: 7.5ms | ActiveRecord: 3.9ms | Allocations: 8143)
+
+
+Started GET "/api/v1/skaters" for ::1 at 2020-05-13 13:36:33 -0600
+Processing by Api::V1::SkatersController#index as HTML
+  [1m[36mSkater Load (0.7ms)[0m  [1m[34mSELECT "skaters".* FROM "skaters"[0m
+  ↳ app/controllers/api/v1/skaters_controller.rb:7:in `index'
+Completed 200 OK in 7ms (Views: 5.7ms | ActiveRecord: 0.7ms | Allocations: 2913)
+
+
+Started GET "/api/v1/skaters" for ::1 at 2020-05-13 13:39:10 -0600
+Processing by Api::V1::SkatersController#index as HTML
+  [1m[36mSkater Load (0.2ms)[0m  [1m[34mSELECT "skaters".* FROM "skaters"[0m
+  ↳ app/controllers/api/v1/skaters_controller.rb:7:in `index'
+Completed 200 OK in 11ms (Views: 6.3ms | ActiveRecord: 3.3ms | Allocations: 7633)
+
+
+Started GET "/api/v1/skaters" for ::1 at 2020-05-13 13:39:18 -0600
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::SkatersController#index as HTML
+  [1m[36mSkater Load (0.5ms)[0m  [1m[34mSELECT "skaters".* FROM "skaters"[0m
+  ↳ app/controllers/api/v1/skaters_controller.rb:7:in `index'
+Completed 200 OK in 15ms (Views: 7.3ms | ActiveRecord: 5.0ms | Allocations: 8142)
+
+
+Started GET "/api/v1/skaters" for ::1 at 2020-05-13 13:39:19 -0600
+Processing by Api::V1::SkatersController#index as HTML
+  [1m[36mSkater Load (0.5ms)[0m  [1m[34mSELECT "skaters".* FROM "skaters"[0m
+  ↳ app/controllers/api/v1/skaters_controller.rb:7:in `index'
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.5ms | Allocations: 2913)
+
+
+Started GET "/api/v1/skaters" for ::1 at 2020-05-13 13:39:54 -0600
+Processing by Api::V1::SkatersController#index as HTML
+  [1m[36mSkater Load (0.3ms)[0m  [1m[34mSELECT "skaters".* FROM "skaters"[0m
+  ↳ app/controllers/api/v1/skaters_controller.rb:7:in `index'
+Completed 200 OK in 14ms (Views: 9.6ms | ActiveRecord: 3.0ms | Allocations: 7633)
+
+
+Started GET "/api/v1/stances" for ::1 at 2020-05-13 13:39:57 -0600
+Processing by Api::V1::StancesController#index as HTML
+  [1m[36mStance Load (0.4ms)[0m  [1m[34mSELECT "stances".* FROM "stances" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Stance Load (0.0ms)[0m  [1m[34mSELECT "stances".* FROM "stances" LIMIT $1[0m  [["LIMIT", 11]]
+Completed 500 Internal Server Error in 135ms (ActiveRecord: 0.0ms | Allocations: 74509)
+
+
+  [1m[36mCACHE Stance Load (0.0ms)[0m  [1m[34mSELECT "stances".* FROM "stances" LIMIT $1[0m  [["LIMIT", 11]]
+  
+NameError (undefined local variable or method `stance' for #<Api::V1::StancesController:0x00007f89f764b210>
+Did you mean?  @stances):
+  
+app/controllers/api/v1/stances_controller.rb:7:in `index'
+Started GET "/api/v1/stancess" for ::1 at 2020-05-13 13:40:03 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/stancess"):
+  
+actionpack (6.0.3) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3) lib/rails/engine.rb:527:in `call'
+puma (4.3.3) lib/puma/configuration.rb:228:in `call'
+puma (4.3.3) lib/puma/server.rb:682:in `handle_request'
+puma (4.3.3) lib/puma/server.rb:472:in `process_client'
+puma (4.3.3) lib/puma/server.rb:328:in `block in run'
+puma (4.3.3) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/api/v1/stances" for ::1 at 2020-05-13 13:40:07 -0600
+Processing by Api::V1::StancesController#index as HTML
+  [1m[36mStance Load (0.2ms)[0m  [1m[34mSELECT "stances".* FROM "stances" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mCACHE Stance Load (0.0ms)[0m  [1m[34mSELECT "stances".* FROM "stances" LIMIT $1[0m  [["LIMIT", 11]]
+Completed 500 Internal Server Error in 129ms (ActiveRecord: 0.0ms | Allocations: 72485)
+
+
+  [1m[36mCACHE Stance Load (0.0ms)[0m  [1m[34mSELECT "stances".* FROM "stances" LIMIT $1[0m  [["LIMIT", 11]]
+  
+NameError (undefined local variable or method `stance' for #<Api::V1::StancesController:0x00007f89f723fb58>
+Did you mean?  @stances):
+  
+app/controllers/api/v1/stances_controller.rb:7:in `index'
+Started GET "/api/v1/stances" for ::1 at 2020-05-13 13:40:17 -0600
+Processing by Api::V1::StancesController#index as HTML
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 1376)
+
+
+Started GET "/api/v1/stances" for ::1 at 2020-05-13 13:40:22 -0600
+Processing by Api::V1::StancesController#index as HTML
+  [1m[36mStance Load (0.2ms)[0m  [1m[34mSELECT "stances".* FROM "stances"[0m
+  ↳ app/controllers/api/v1/stances_controller.rb:7:in `index'
+Completed 200 OK in 4ms (Views: 1.2ms | ActiveRecord: 1.1ms | Allocations: 2417)
+
+
+Started GET "/api/v1/stances" for ::1 at 2020-05-13 13:40:24 -0600
+Processing by Api::V1::StancesController#index as HTML
+  [1m[36mStance Load (0.2ms)[0m  [1m[34mSELECT "stances".* FROM "stances"[0m
+  ↳ app/controllers/api/v1/stances_controller.rb:7:in `index'
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.2ms | Allocations: 900)
+
+
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (36.0ms)[0m  [1m[35mDROP DATABASE IF EXISTS "skate_api_development"[0m
+  [1m[35m (29.0ms)[0m  [1m[35mDROP DATABASE IF EXISTS "skate_api_test"[0m
+  [1m[35m (89.4ms)[0m  [1m[35mCREATE DATABASE "skate_api_development" ENCODING = 'unicode'[0m
+  [1m[35m (76.8ms)[0m  [1m[35mCREATE DATABASE "skate_api_test" ENCODING = 'unicode'[0m
+  [1m[35m (4.3ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (2.2ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7080527816319185865)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateSkaters (20200510032316)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (5.5ms)[0m  [1m[35mCREATE TABLE "skaters" ("id" bigserial primary key, "first_name" character varying, "last_name" character varying, "stance_id" integer, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200510032316"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateTricks (20200513165940)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (2.1ms)[0m  [1m[35mCREATE TABLE "tricks" ("id" bigserial primary key, "name" character varying, "variant" character varying, "type" character varying, "stance" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200513165940"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateStances (20200513180052)
+  [1m[35m (5.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (14.1ms)[0m  [1m[35mCREATE TABLE "stances" ("id" bigserial primary key, "name" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200513180052"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateVariants (20200513180116)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (2.8ms)[0m  [1m[35mCREATE TABLE "variants" ("id" bigserial primary key, "name" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200513180116"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateTypes (20200513180136)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (4.3ms)[0m  [1m[35mCREATE TABLE "types" ("id" bigserial primary key, "name" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200513180136"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (1.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-05-13 19:41:21.916491"], ["updated_at", "2020-05-13 19:41:21.916491"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(7080527816319185865)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSkater Create (0.6ms)[0m  [1m[32mINSERT INTO "skaters" ("first_name", "last_name", "stance_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["first_name", "TEST SKATER"], ["last_name", "BUDDY GUY"], ["stance_id", 1], ["created_at", "2020-05-13 19:41:23.482120"], ["updated_at", "2020-05-13 19:41:23.482120"]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSkater Create (0.2ms)[0m  [1m[32mINSERT INTO "skaters" ("first_name", "last_name", "stance_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["first_name", "CJ"], ["last_name", "Stohr"], ["stance_id", 1], ["created_at", "2020-05-13 19:41:23.486774"], ["updated_at", "2020-05-13 19:41:23.486774"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSkater Create (0.3ms)[0m  [1m[32mINSERT INTO "skaters" ("first_name", "last_name", "stance_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["first_name", "Freddy"], ["last_name", "Silber"], ["stance_id", 1], ["created_at", "2020-05-13 19:41:23.490111"], ["updated_at", "2020-05-13 19:41:23.490111"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSkater Create (0.2ms)[0m  [1m[32mINSERT INTO "skaters" ("first_name", "last_name", "stance_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["first_name", "Martin"], ["last_name", "Stohr"], ["stance_id", 2], ["created_at", "2020-05-13 19:41:23.493154"], ["updated_at", "2020-05-13 19:41:23.493154"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSkater Create (0.2ms)[0m  [1m[32mINSERT INTO "skaters" ("first_name", "last_name", "stance_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["first_name", "Ricky"], ["last_name", "Bugos"], ["stance_id", 1], ["created_at", "2020-05-13 19:41:23.496581"], ["updated_at", "2020-05-13 19:41:23.496581"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSkater Create (0.2ms)[0m  [1m[32mINSERT INTO "skaters" ("first_name", "last_name", "stance_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["first_name", "Lydia"], ["last_name", "Silber"], ["stance_id", 1], ["created_at", "2020-05-13 19:41:23.500818"], ["updated_at", "2020-05-13 19:41:23.500818"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSkater Create (0.2ms)[0m  [1m[32mINSERT INTO "skaters" ("first_name", "last_name", "stance_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["first_name", "Quinn"], ["last_name", "Ailes"], ["stance_id", 2], ["created_at", "2020-05-13 19:41:23.504026"], ["updated_at", "2020-05-13 19:41:23.504026"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSkater Create (0.2ms)[0m  [1m[32mINSERT INTO "skaters" ("first_name", "last_name", "stance_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["first_name", "Harry"], ["last_name", "Lietzke"], ["stance_id", 2], ["created_at", "2020-05-13 19:41:23.507140"], ["updated_at", "2020-05-13 19:41:23.507140"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSkater Create (0.2ms)[0m  [1m[32mINSERT INTO "skaters" ("first_name", "last_name", "stance_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["first_name", "Abe"], ["last_name", "Lietzke"], ["stance_id", 2], ["created_at", "2020-05-13 19:41:23.510438"], ["updated_at", "2020-05-13 19:41:23.510438"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mSkater Create (0.2ms)[0m  [1m[32mINSERT INTO "skaters" ("first_name", "last_name", "stance_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["first_name", "Birk"], ["last_name", "Irving"], ["stance_id", 1], ["created_at", "2020-05-13 19:41:23.527823"], ["updated_at", "2020-05-13 19:41:23.527823"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTrick Create (0.6ms)[0m  [1m[32mINSERT INTO "tricks" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Kickflip"], ["created_at", "2020-05-13 19:41:23.539075"], ["updated_at", "2020-05-13 19:41:23.539075"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTrick Create (0.3ms)[0m  [1m[32mINSERT INTO "tricks" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Heelflip"], ["created_at", "2020-05-13 19:41:23.542860"], ["updated_at", "2020-05-13 19:41:23.542860"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTrick Create (0.2ms)[0m  [1m[32mINSERT INTO "tricks" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Ollie"], ["created_at", "2020-05-13 19:41:23.546180"], ["updated_at", "2020-05-13 19:41:23.546180"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/api/v1/stances" for ::1 at 2020-05-13 13:41:27 -0600
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::StancesController#index as HTML
+  [1m[36mStance Load (0.5ms)[0m  [1m[34mSELECT "stances".* FROM "stances"[0m
+  ↳ app/controllers/api/v1/stances_controller.rb:7:in `index'
+Completed 200 OK in 7ms (Views: 1.6ms | ActiveRecord: 1.5ms | Allocations: 3097)
+
+
+Started GET "/api/v1/stances" for ::1 at 2020-05-13 13:41:29 -0600
+Processing by Api::V1::StancesController#index as HTML
+  [1m[36mStance Load (0.2ms)[0m  [1m[34mSELECT "stances".* FROM "stances"[0m
+  ↳ app/controllers/api/v1/stances_controller.rb:7:in `index'
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.2ms | Allocations: 898)
+
+
+Started GET "/api/v1/stances" for ::1 at 2020-05-13 13:41:30 -0600
+Processing by Api::V1::StancesController#index as HTML
+  [1m[36mStance Load (0.4ms)[0m  [1m[34mSELECT "stances".* FROM "stances"[0m
+  ↳ app/controllers/api/v1/stances_controller.rb:7:in `index'
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.4ms | Allocations: 898)
+
+
+Started GET "/api/v1/stances" for ::1 at 2020-05-13 13:41:31 -0600
+Processing by Api::V1::StancesController#index as HTML
+  [1m[36mStance Load (0.4ms)[0m  [1m[34mSELECT "stances".* FROM "stances"[0m
+  ↳ app/controllers/api/v1/stances_controller.rb:7:in `index'
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.4ms | Allocations: 898)
+
+
+Started GET "/api/v1/stances" for ::1 at 2020-05-13 13:41:31 -0600
+Processing by Api::V1::StancesController#index as HTML
+  [1m[36mStance Load (0.2ms)[0m  [1m[34mSELECT "stances".* FROM "stances"[0m
+  ↳ app/controllers/api/v1/stances_controller.rb:7:in `index'
+Completed 200 OK in 1ms (Views: 1.1ms | ActiveRecord: 0.2ms | Allocations: 898)
+
+
+  [1m[36mStance Load (0.3ms)[0m  [1m[34mSELECT "stances".* FROM "stances" LIMIT $1[0m  [["LIMIT", 11]]
