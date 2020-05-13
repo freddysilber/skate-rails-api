@@ -15,6 +15,6 @@ This repo needs to be named to skate-rails-api
 
 
 
-To get to this url, I ram heroku login, heroku run rake db:migrate, heroku open, heroku run rake db:seed
+To get to this url, I ran heroku login, heroku run rake db:migrate, heroku open, heroku run rake db:seed
 
 https://sk8-api.herokuapp.com/api/v1/skaters
