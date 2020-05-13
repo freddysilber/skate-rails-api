@@ -4,13 +4,12 @@ class Api::V1::SkatersController < ApplicationController
   # GET /skaters
   def index
     @skaters = Skater.all
-
-    render json: @skaters
+    render json: SkaterSerializer.new(@skaters)
   end
 
   # GET /skaters/1
   def show
-    render json: @skater
+    render json: SkaterSerializer.new(@skater)
   end
 
   # POST /skaters
@@ -46,6 +45,10 @@ class Api::V1::SkatersController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def skater_params
-      params.require(:skater).permit(:name)
+      params.require(:skater).permit(
+        :first_name,
+        :last_name,
+        :stance_id
+      )
     end
 end

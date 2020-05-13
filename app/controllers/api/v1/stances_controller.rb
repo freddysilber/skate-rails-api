@@ -3,9 +3,8 @@ class Api::V1::StancesController < ApplicationController
 
   # GET /stances
   def index
-    @stances = Stance.all
-
-    render json: @stances
+    stances = Stance.all
+    render json: StanceSerializer.new(stance)
   end
 
   # GET /stances/1
@@ -46,6 +45,8 @@ class Api::V1::StancesController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def stance_params
-      params.require(:stance).permit(:string)
+      params.require(:stance).permit(
+        :name
+      )
     end
 end
