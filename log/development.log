@@ -5101,3 +5101,88 @@ Completed 200 OK in 1ms (Views: 1.1ms | ActiveRecord: 0.2ms | Allocations: 898)
 
 
   [1m[36mStance Load (0.3ms)[0m  [1m[34mSELECT "stances".* FROM "stances" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mStance Load (0.5ms)[0m  [1m[34mSELECT "stances".* FROM "stances" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mStance Load (0.2ms)[0m  [1m[34mSELECT "stances".* FROM "stances" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mStance Create (0.6ms)[0m  [1m[32mINSERT INTO "stances" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "regular"], ["created_at", "2020-05-13 19:44:11.328937"], ["updated_at", "2020-05-13 19:44:11.328937"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/api/v1/stances" for ::1 at 2020-05-13 13:44:24 -0600
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::StancesController#index as HTML
+  [1m[36mStance Load (0.5ms)[0m  [1m[34mSELECT "stances".* FROM "stances"[0m
+  ↳ app/controllers/api/v1/stances_controller.rb:7:in `index'
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "skaters"."id" FROM "skaters" WHERE "skaters"."stance_id" = $1[0m  [["stance_id", 1]]
+  ↳ app/controllers/api/v1/stances_controller.rb:7:in `index'
+Completed 200 OK in 30ms (Views: 18.9ms | ActiveRecord: 6.9ms | Allocations: 10609)
+
+
+Started GET "/api/v1/stances" for ::1 at 2020-05-13 13:44:55 -0600
+Processing by Api::V1::StancesController#index as HTML
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 1643)
+
+
+  
+NoMethodError (undefined method `name' for :skater:Symbol):
+  
+app/serializers/stance_serializer.rb:6:in `<class:StanceSerializer>'
+app/serializers/stance_serializer.rb:1:in `<main>'
+app/controllers/api/v1/stances_controller.rb:7:in `index'
+Started GET "/api/v1/stances" for ::1 at 2020-05-13 13:45:03 -0600
+Processing by Api::V1::StancesController#index as HTML
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms | Allocations: 1633)
+
+
+  
+NoMethodError (undefined method `first_name' for :skater:Symbol):
+  
+app/serializers/stance_serializer.rb:6:in `<class:StanceSerializer>'
+app/serializers/stance_serializer.rb:1:in `<main>'
+app/controllers/api/v1/stances_controller.rb:7:in `index'
+Started GET "/api/v1/stances" for ::1 at 2020-05-13 13:45:04 -0600
+Processing by Api::V1::StancesController#index as HTML
+  [1m[36mStance Load (0.3ms)[0m  [1m[34mSELECT "stances".* FROM "stances"[0m
+  ↳ app/controllers/api/v1/stances_controller.rb:7:in `index'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "skaters"."id" FROM "skaters" WHERE "skaters"."stance_id" = $1[0m  [["stance_id", 1]]
+  ↳ app/controllers/api/v1/stances_controller.rb:7:in `index'
+Completed 200 OK in 13ms (Views: 7.4ms | ActiveRecord: 5.4ms | Allocations: 5660)
+
+
+Started GET "/api/v1/stances" for ::1 at 2020-05-13 13:45:06 -0600
+Processing by Api::V1::StancesController#index as HTML
+  [1m[36mStance Load (0.5ms)[0m  [1m[34mSELECT "stances".* FROM "stances"[0m
+  ↳ app/controllers/api/v1/stances_controller.rb:7:in `index'
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "skaters"."id" FROM "skaters" WHERE "skaters"."stance_id" = $1[0m  [["stance_id", 1]]
+  ↳ app/controllers/api/v1/stances_controller.rb:7:in `index'
+Completed 200 OK in 5ms (Views: 3.8ms | ActiveRecord: 0.8ms | Allocations: 2221)
+
+
+Started GET "/api/v1/stances" for ::1 at 2020-05-13 13:45:06 -0600
+Processing by Api::V1::StancesController#index as HTML
+  [1m[36mStance Load (0.2ms)[0m  [1m[34mSELECT "stances".* FROM "stances"[0m
+  ↳ app/controllers/api/v1/stances_controller.rb:7:in `index'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "skaters"."id" FROM "skaters" WHERE "skaters"."stance_id" = $1[0m  [["stance_id", 1]]
+  ↳ app/controllers/api/v1/stances_controller.rb:7:in `index'
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.4ms | Allocations: 2210)
+
+
+Started GET "/api/v1/stances" for ::1 at 2020-05-13 13:45:17 -0600
+Processing by Api::V1::StancesController#index as HTML
+  [1m[36mStance Load (0.2ms)[0m  [1m[34mSELECT "stances".* FROM "stances"[0m
+  ↳ app/controllers/api/v1/stances_controller.rb:7:in `index'
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 2.7ms | Allocations: 6160)
+
+
+  
+NoMethodError (undefined method `skater_first_name' for #<Stance:0x00007fdeb0acbcc8>
+Did you mean?  skater_ids):
+  
+app/controllers/api/v1/stances_controller.rb:7:in `index'
+Started GET "/api/v1/stances" for ::1 at 2020-05-13 13:45:28 -0600
+Processing by Api::V1::StancesController#index as HTML
+  [1m[36mStance Load (0.3ms)[0m  [1m[34mSELECT "stances".* FROM "stances"[0m
+  ↳ app/controllers/api/v1/stances_controller.rb:7:in `index'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "skaters"."id" FROM "skaters" WHERE "skaters"."stance_id" = $1[0m  [["stance_id", 1]]
+  ↳ app/controllers/api/v1/stances_controller.rb:7:in `index'
+Completed 200 OK in 14ms (Views: 6.9ms | ActiveRecord: 4.9ms | Allocations: 6774)
+
+
