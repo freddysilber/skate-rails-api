@@ -1,4 +1,4 @@
-class StancesController < ApplicationController
+class Api::V1::StancesController < ApplicationController
   before_action :set_stance, only: [:show, :update, :destroy]
 
   # GET /stances

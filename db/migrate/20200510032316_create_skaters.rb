@@ -4,6 +4,7 @@ class CreateSkaters < ActiveRecord::Migration[6.0]
       t.string :first_name
       t.string :last_name
       t.string :stance
+      t.integer :stance_id
 
       t.timestamps
     end

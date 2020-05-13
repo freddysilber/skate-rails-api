@@ -1,4 +1,4 @@
-class VariantsController < ApplicationController
+class Api::V1::VariantsController < ApplicationController
   before_action :set_variant, only: [:show, :update, :destroy]
 
   # GET /variants
