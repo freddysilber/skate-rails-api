@@ -27,3 +27,18 @@ Stance.create(
 		{name: 'Goofy'}
 	]
 )
+#  Seed Types
+Type.create(
+	[
+		{name: 'Flatground'},
+		{name: 'Transition'},
+		{name: 'Rail / Ledge'}
+	]
+)
+# Seed Variants
+Variant.create(
+	[
+		{name: 'Frontside'},
+		{name: 'Backside'}
+	]
+)
