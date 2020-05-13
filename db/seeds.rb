@@ -20,3 +20,10 @@ Trick.create(
 		{name: 'Ollie'}
 	]
 )
+# Seed Stances
+Stance.create(
+	[
+		{name: 'Regular'},
+		{name: 'Goofy'}
+	]
+)
