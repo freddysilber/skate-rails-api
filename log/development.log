@@ -5186,3 +5186,19 @@ Processing by Api::V1::StancesController#index as HTML
 Completed 200 OK in 14ms (Views: 6.9ms | ActiveRecord: 4.9ms | Allocations: 6774)
 
 
+Started GET "/api/v1/stances" for ::1 at 2020-05-13 13:58:50 -0600
+Processing by Api::V1::StancesController#index as HTML
+  [1m[36mStance Load (0.6ms)[0m  [1m[34mSELECT "stances".* FROM "stances"[0m
+  ↳ app/controllers/api/v1/stances_controller.rb:7:in `index'
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "skaters"."id" FROM "skaters" WHERE "skaters"."stance_id" = $1[0m  [["stance_id", 1]]
+  ↳ app/controllers/api/v1/stances_controller.rb:7:in `index'
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 1.1ms | Allocations: 2322)
+
+
+Started GET "/api/v1/types" for ::1 at 2020-05-13 13:58:54 -0600
+Processing by Api::V1::TypesController#index as HTML
+  [1m[36mType Load (0.5ms)[0m  [1m[34mSELECT "types".* FROM "types"[0m
+  ↳ app/controllers/api/v1/types_controller.rb:8:in `index'
+Completed 200 OK in 15ms (Views: 9.2ms | ActiveRecord: 3.1ms | Allocations: 1417)
+
+
