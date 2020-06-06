@@ -5,5 +5,5 @@
 /tmp
 tmp
 log
-
+# Ingore VSCode settings
 .vscode
