@@ -5202,3 +5202,1350 @@ Processing by Api::V1::TypesController#index as HTML
 Completed 200 OK in 15ms (Views: 9.2ms | ActiveRecord: 3.1ms | Allocations: 1417)
 
 
+Started GET "/" for ::1 at 2020-08-08 20:20:12 -0600
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/freddysilber/.rvm/gems/ruby-2.6.3/gems/railties-6.0.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/freddysilber/.rvm/gems/ruby-2.6.3/gems/railties-6.0.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 9.8ms | Allocations: 480)
+Completed 200 OK in 20ms (Views: 15.1ms | ActiveRecord: 0.0ms | Allocations: 2635)
+
+
+Started GET "/favicon.ico" for ::1 at 2020-08-08 20:20:12 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (6.0.3) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3) lib/rails/engine.rb:527:in `call'
+puma (4.3.3) lib/puma/configuration.rb:228:in `call'
+puma (4.3.3) lib/puma/server.rb:682:in `handle_request'
+puma (4.3.3) lib/puma/server.rb:472:in `process_client'
+puma (4.3.3) lib/puma/server.rb:328:in `block in run'
+puma (4.3.3) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/api/v1/skaters" for ::1 at 2020-08-08 20:20:36 -0600
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::SkatersController#index as HTML
+  [1m[36mSkater Load (25.2ms)[0m  [1m[34mSELECT "skaters".* FROM "skaters"[0m
+  ↳ app/controllers/api/v1/skaters_controller.rb:7:in `index'
+Completed 200 OK in 46ms (Views: 9.2ms | ActiveRecord: 31.5ms | Allocations: 8279)
+
+
+Started GET "/" for ::1 at 2020-08-08 20:20:41 -0600
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/freddysilber/.rvm/gems/ruby-2.6.3/gems/railties-6.0.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/freddysilber/.rvm/gems/ruby-2.6.3/gems/railties-6.0.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 5.7ms | Allocations: 315)
+Completed 200 OK in 9ms (Views: 7.0ms | ActiveRecord: 0.0ms | Allocations: 1592)
+
+
+Started GET "/favicon.ico" for ::1 at 2020-08-08 20:20:41 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (6.0.3) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3) lib/rails/engine.rb:527:in `call'
+puma (4.3.3) lib/puma/configuration.rb:228:in `call'
+puma (4.3.3) lib/puma/server.rb:682:in `handle_request'
+puma (4.3.3) lib/puma/server.rb:472:in `process_client'
+puma (4.3.3) lib/puma/server.rb:328:in `block in run'
+puma (4.3.3) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/api/v1/skaters" for ::1 at 2020-08-08 20:21:23 -0600
+Processing by Api::V1::SkatersController#index as HTML
+  [1m[36mSkater Load (0.5ms)[0m  [1m[34mSELECT "skaters".* FROM "skaters"[0m
+  ↳ app/controllers/api/v1/skaters_controller.rb:7:in `index'
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.5ms | Allocations: 2912)
+
+
+Started GET "/api/v1/skaters" for ::1 at 2020-08-08 20:21:29 -0600
+Processing by Api::V1::SkatersController#index as HTML
+  [1m[36mSkater Load (5.1ms)[0m  [1m[34mSELECT "skaters".* FROM "skaters"[0m
+  ↳ app/controllers/api/v1/skaters_controller.rb:7:in `index'
+Completed 200 OK in 9ms (Views: 3.8ms | ActiveRecord: 5.1ms | Allocations: 2894)
+
+
+Started GET "/skaters" for ::1 at 2020-08-08 20:21:35 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/skaters"):
+  
+actionpack (6.0.3) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3) lib/rails/engine.rb:527:in `call'
+puma (4.3.3) lib/puma/configuration.rb:228:in `call'
+puma (4.3.3) lib/puma/server.rb:682:in `handle_request'
+puma (4.3.3) lib/puma/server.rb:472:in `process_client'
+puma (4.3.3) lib/puma/server.rb:328:in `block in run'
+puma (4.3.3) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/api/v1skaters" for ::1 at 2020-08-08 20:26:51 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1skaters"):
+  
+actionpack (6.0.3) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3) lib/rails/engine.rb:527:in `call'
+puma (4.3.3) lib/puma/configuration.rb:228:in `call'
+puma (4.3.3) lib/puma/server.rb:682:in `handle_request'
+puma (4.3.3) lib/puma/server.rb:472:in `process_client'
+puma (4.3.3) lib/puma/server.rb:328:in `block in run'
+puma (4.3.3) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/api/v1skaters" for ::1 at 2020-08-08 20:28:29 -0600
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1skaters"):
+  
+actionpack (6.0.3) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3) lib/rails/engine.rb:527:in `call'
+puma (4.3.3) lib/puma/configuration.rb:228:in `call'
+puma (4.3.3) lib/puma/server.rb:682:in `handle_request'
+puma (4.3.3) lib/puma/server.rb:472:in `process_client'
+puma (4.3.3) lib/puma/server.rb:328:in `block in run'
+puma (4.3.3) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/rails/info/routes?path=skate" for ::1 at 2020-08-08 20:28:34 -0600
+Processing by Rails::InfoController#routes as */*
+  Parameters: {"path"=>"skate"}
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 2716)
+
+
+Started GET "/rails/info/routes?path=skater" for ::1 at 2020-08-08 20:28:36 -0600
+Processing by Rails::InfoController#routes as */*
+  Parameters: {"path"=>"skater"}
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 946)
+
+
+Started GET "/rails/info/routes?path=skaters" for ::1 at 2020-08-08 20:28:37 -0600
+Processing by Rails::InfoController#routes as */*
+  Parameters: {"path"=>"skaters"}
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 945)
+
+
+Started GET "/rails/info/routes?path=skate" for ::1 at 2020-08-08 20:28:41 -0600
+Processing by Rails::InfoController#routes as */*
+  Parameters: {"path"=>"skate"}
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 945)
+
+
+Started GET "/rails/info/routes?path=skat" for ::1 at 2020-08-08 20:28:41 -0600
+Processing by Rails::InfoController#routes as */*
+  Parameters: {"path"=>"skat"}
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 946)
+
+
+Started GET "/api/v1skaters/index" for ::1 at 2020-08-08 20:28:45 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1skaters/index"):
+  
+actionpack (6.0.3) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3) lib/rails/engine.rb:527:in `call'
+puma (4.3.3) lib/puma/configuration.rb:228:in `call'
+puma (4.3.3) lib/puma/server.rb:682:in `handle_request'
+puma (4.3.3) lib/puma/server.rb:472:in `process_client'
+puma (4.3.3) lib/puma/server.rb:328:in `block in run'
+puma (4.3.3) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/api/v1skaters" for ::1 at 2020-08-08 20:28:50 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1skaters"):
+  
+actionpack (6.0.3) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3) lib/rails/engine.rb:527:in `call'
+puma (4.3.3) lib/puma/configuration.rb:228:in `call'
+puma (4.3.3) lib/puma/server.rb:682:in `handle_request'
+puma (4.3.3) lib/puma/server.rb:472:in `process_client'
+puma (4.3.3) lib/puma/server.rb:328:in `block in run'
+puma (4.3.3) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/api/v1/skaters" for ::1 at 2020-08-08 20:28:56 -0600
+Processing by Api::V1::SkatersController#index as HTML
+  [1m[36mSkater Load (0.4ms)[0m  [1m[34mSELECT "skaters".* FROM "skaters"[0m
+  ↳ app/controllers/api/v1/skaters_controller.rb:7:in `index'
+Completed 200 OK in 14ms (Views: 8.1ms | ActiveRecord: 4.0ms | Allocations: 8147)
+
+
+Started GET "/api/v1/skaters" for ::1 at 2020-08-08 20:29:14 -0600
+Processing by Api::V1::SkatersController#index as HTML
+  [1m[36mSkater Load (4.3ms)[0m  [1m[34mSELECT "skaters".* FROM "skaters"[0m
+  ↳ app/controllers/api/v1/skaters_controller.rb:7:in `index'
+Completed 200 OK in 9ms (Views: 4.0ms | ActiveRecord: 4.3ms | Allocations: 2894)
+
+
+Started GET "/api/v1/skaters" for ::1 at 2020-08-08 20:29:37 -0600
+Processing by Api::V1::SkatersController#index as HTML
+  [1m[36mSkater Load (0.4ms)[0m  [1m[34mSELECT "skaters".* FROM "skaters"[0m
+  ↳ app/controllers/api/v1/skaters_controller.rb:7:in `index'
+Completed 200 OK in 4ms (Views: 3.8ms | ActiveRecord: 0.4ms | Allocations: 2908)
+
+
+Started GET "/api/v1/skaters" for ::1 at 2020-08-08 20:29:53 -0600
+Processing by Api::V1::SkatersController#index as HTML
+  [1m[36mSkater Load (1.7ms)[0m  [1m[34mSELECT "skaters".* FROM "skaters"[0m
+  ↳ app/controllers/api/v1/skaters_controller.rb:7:in `index'
+Completed 200 OK in 5ms (Views: 3.4ms | ActiveRecord: 1.7ms | Allocations: 2894)
+
+
+Started GET "/api/v1/skaters" for ::1 at 2020-08-08 20:30:06 -0600
+Processing by Api::V1::SkatersController#index as HTML
+  [1m[36mSkater Load (1.6ms)[0m  [1m[34mSELECT "skaters".* FROM "skaters"[0m
+  ↳ app/controllers/api/v1/skaters_controller.rb:7:in `index'
+Completed 200 OK in 7ms (Views: 4.6ms | ActiveRecord: 1.6ms | Allocations: 2909)
+
+
+Started GET "/api/v1/skaters" for ::1 at 2020-08-08 20:30:11 -0600
+Processing by Api::V1::SkatersController#index as HTML
+  [1m[36mSkater Load (0.4ms)[0m  [1m[34mSELECT "skaters".* FROM "skaters"[0m
+  ↳ app/controllers/api/v1/skaters_controller.rb:7:in `index'
+Completed 200 OK in 3ms (Views: 2.9ms | ActiveRecord: 0.4ms | Allocations: 2894)
+
+
+Started GET "/api/v1/skaters" for ::1 at 2020-08-08 20:39:44 -0600
+Processing by Api::V1::SkatersController#index as HTML
+  [1m[36mSkater Load (0.7ms)[0m  [1m[34mSELECT "skaters".* FROM "skaters"[0m
+  ↳ app/controllers/api/v1/skaters_controller.rb:7:in `index'
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.7ms | Allocations: 2976)
+
+
+Started GET "/api/v1/skaters" for ::1 at 2020-08-08 20:40:01 -0600
+Processing by Api::V1::SkatersController#index as HTML
+  [1m[36mSkater Load (0.3ms)[0m  [1m[34mSELECT "skaters".* FROM "skaters"[0m
+  ↳ app/controllers/api/v1/skaters_controller.rb:7:in `index'
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.3ms | Allocations: 2894)
+
+
+Started GET "/api/v1/skaters" for ::1 at 2020-08-08 20:40:12 -0600
+Processing by Api::V1::SkatersController#index as HTML
+  [1m[36mSkater Load (0.3ms)[0m  [1m[34mSELECT "skaters".* FROM "skaters"[0m
+  ↳ app/controllers/api/v1/skaters_controller.rb:7:in `index'
+Completed 200 OK in 4ms (Views: 3.7ms | ActiveRecord: 0.3ms | Allocations: 2894)
+
+
+Started GET "/api/v1/skaters" for ::1 at 2020-08-08 20:40:28 -0600
+Processing by Api::V1::SkatersController#index as HTML
+  [1m[36mSkater Load (11.0ms)[0m  [1m[34mSELECT "skaters".* FROM "skaters"[0m
+  ↳ app/controllers/api/v1/skaters_controller.rb:7:in `index'
+Completed 200 OK in 14ms (Views: 2.7ms | ActiveRecord: 11.0ms | Allocations: 2894)
+
+
+Started GET "/api/v1/skaters" for ::1 at 2020-08-08 20:40:33 -0600
+Processing by Api::V1::SkatersController#index as HTML
+  [1m[36mSkater Load (1.2ms)[0m  [1m[34mSELECT "skaters".* FROM "skaters"[0m
+  ↳ app/controllers/api/v1/skaters_controller.rb:7:in `index'
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 1.2ms | Allocations: 2894)
+
+
+Started GET "/api/v1/skaters" for ::1 at 2020-08-08 20:40:40 -0600
+Processing by Api::V1::SkatersController#index as HTML
+  [1m[36mSkater Load (0.5ms)[0m  [1m[34mSELECT "skaters".* FROM "skaters"[0m
+  ↳ app/controllers/api/v1/skaters_controller.rb:7:in `index'
+Completed 200 OK in 5ms (Views: 3.8ms | ActiveRecord: 0.5ms | Allocations: 2894)
+
+
+Started GET "/api/v1/skaters" for ::1 at 2020-08-08 20:41:43 -0600
+Processing by Api::V1::SkatersController#index as HTML
+  [1m[36mSkater Load (0.6ms)[0m  [1m[34mSELECT "skaters".* FROM "skaters"[0m
+  ↳ app/controllers/api/v1/skaters_controller.rb:7:in `index'
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.6ms | Allocations: 2894)
+
+
+Started GET "/api/v1/skaters" for ::1 at 2020-08-08 20:41:46 -0600
+Processing by Api::V1::SkatersController#index as HTML
+  [1m[36mSkater Load (6.8ms)[0m  [1m[34mSELECT "skaters".* FROM "skaters"[0m
+  ↳ app/controllers/api/v1/skaters_controller.rb:7:in `index'
+Completed 200 OK in 25ms (Views: 18.4ms | ActiveRecord: 6.8ms | Allocations: 2897)
+
+
+Started GET "/api/v1/skaters" for ::1 at 2020-08-08 20:42:16 -0600
+Processing by Api::V1::SkatersController#index as HTML
+  [1m[36mSkater Load (0.4ms)[0m  [1m[34mSELECT "skaters".* FROM "skaters"[0m
+  ↳ app/controllers/api/v1/skaters_controller.rb:7:in `index'
+Completed 200 OK in 5ms (Views: 3.8ms | ActiveRecord: 0.4ms | Allocations: 2894)
+
+
+Started GET "/api/v1/skaters" for ::1 at 2020-08-08 20:42:40 -0600
+Processing by Api::V1::SkatersController#index as HTML
+  [1m[36mSkater Load (0.4ms)[0m  [1m[34mSELECT "skaters".* FROM "skaters"[0m
+  ↳ app/controllers/api/v1/skaters_controller.rb:7:in `index'
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.4ms | Allocations: 2894)
+
+
+Started GET "/api/v1/skaters" for ::1 at 2020-08-08 20:42:45 -0600
+Processing by Api::V1::SkatersController#index as HTML
+  [1m[36mSkater Load (1.0ms)[0m  [1m[34mSELECT "skaters".* FROM "skaters"[0m
+  ↳ app/controllers/api/v1/skaters_controller.rb:7:in `index'
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 1.0ms | Allocations: 2894)
+
+
+Started GET "/api/v1/skaters" for ::1 at 2020-08-08 21:02:08 -0600
+Processing by Api::V1::SkatersController#index as HTML
+  [1m[36mSkater Load (0.6ms)[0m  [1m[34mSELECT "skaters".* FROM "skaters"[0m
+  ↳ app/controllers/api/v1/skaters_controller.rb:7:in `index'
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.6ms | Allocations: 2967)
+
+
+Started GET "/api/v1/skaters" for ::1 at 2020-08-08 21:09:43 -0600
+Processing by Api::V1::SkatersController#index as HTML
+  [1m[36mSkater Load (0.8ms)[0m  [1m[34mSELECT "skaters".* FROM "skaters"[0m
+  ↳ app/controllers/api/v1/skaters_controller.rb:7:in `index'
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.8ms | Allocations: 2967)
+
+
+Started GET "/api/v1/skaters" for ::1 at 2020-08-08 21:10:03 -0600
+Processing by Api::V1::SkatersController#index as HTML
+  [1m[36mSkater Load (0.6ms)[0m  [1m[34mSELECT "skaters".* FROM "skaters"[0m
+  ↳ app/controllers/api/v1/skaters_controller.rb:7:in `index'
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.6ms | Allocations: 2894)
+
+
+Started GET "/api/v1/skaters" for ::1 at 2020-08-08 21:10:13 -0600
+Processing by Api::V1::SkatersController#index as HTML
+  [1m[36mSkater Load (0.4ms)[0m  [1m[34mSELECT "skaters".* FROM "skaters"[0m
+  ↳ app/controllers/api/v1/skaters_controller.rb:7:in `index'
+Completed 200 OK in 6ms (Views: 5.0ms | ActiveRecord: 0.4ms | Allocations: 2894)
+
+
+Started GET "/api/v1/skaters" for ::1 at 2020-08-08 21:10:31 -0600
+Processing by Api::V1::SkatersController#index as HTML
+  [1m[36mSkater Load (0.3ms)[0m  [1m[34mSELECT "skaters".* FROM "skaters"[0m
+  ↳ app/controllers/api/v1/skaters_controller.rb:7:in `index'
+Completed 200 OK in 7ms (Views: 5.1ms | ActiveRecord: 0.3ms | Allocations: 2894)
+
+
+Started GET "/api/v1/skaters" for ::1 at 2020-08-08 21:10:36 -0600
+Processing by Api::V1::SkatersController#index as HTML
+  [1m[36mSkater Load (0.2ms)[0m  [1m[34mSELECT "skaters".* FROM "skaters"[0m
+  ↳ app/controllers/api/v1/skaters_controller.rb:7:in `index'
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.2ms | Allocations: 2894)
+
+
+Started GET "/api/v1/skaters" for ::1 at 2020-08-08 21:10:48 -0600
+Processing by Api::V1::SkatersController#index as HTML
+  [1m[36mSkater Load (0.3ms)[0m  [1m[34mSELECT "skaters".* FROM "skaters"[0m
+  ↳ app/controllers/api/v1/skaters_controller.rb:7:in `index'
+Completed 200 OK in 4ms (Views: 3.7ms | ActiveRecord: 0.3ms | Allocations: 2894)
+
+
+Started GET "/api/v1/skaters" for ::1 at 2020-08-08 21:11:06 -0600
+Processing by Api::V1::SkatersController#index as HTML
+  [1m[36mSkater Load (1.5ms)[0m  [1m[34mSELECT "skaters".* FROM "skaters"[0m
+  ↳ app/controllers/api/v1/skaters_controller.rb:7:in `index'
+Completed 200 OK in 6ms (Views: 4.0ms | ActiveRecord: 1.5ms | Allocations: 2894)
+
+
+Started GET "/api/v1/skaters" for ::1 at 2020-08-08 21:11:17 -0600
+Processing by Api::V1::SkatersController#index as HTML
+  [1m[36mSkater Load (0.3ms)[0m  [1m[34mSELECT "skaters".* FROM "skaters"[0m
+  ↳ app/controllers/api/v1/skaters_controller.rb:7:in `index'
+Completed 200 OK in 5ms (Views: 4.2ms | ActiveRecord: 0.3ms | Allocations: 2894)
+
+
+Started GET "/api/v1/skaters" for ::1 at 2020-08-08 21:11:21 -0600
+Processing by Api::V1::SkatersController#index as HTML
+  [1m[36mSkater Load (0.2ms)[0m  [1m[34mSELECT "skaters".* FROM "skaters"[0m
+  ↳ app/controllers/api/v1/skaters_controller.rb:7:in `index'
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.2ms | Allocations: 2894)
+
+
+Started GET "/api/v1/skaters" for ::1 at 2020-08-08 21:11:31 -0600
+Processing by Api::V1::SkatersController#index as HTML
+  [1m[36mSkater Load (0.2ms)[0m  [1m[34mSELECT "skaters".* FROM "skaters"[0m
+  ↳ app/controllers/api/v1/skaters_controller.rb:7:in `index'
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.2ms | Allocations: 2894)
+
+
+Started GET "/api/v1/skaters" for ::1 at 2020-08-08 21:11:41 -0600
+Processing by Api::V1::SkatersController#index as HTML
+  [1m[36mSkater Load (0.8ms)[0m  [1m[34mSELECT "skaters".* FROM "skaters"[0m
+  ↳ app/controllers/api/v1/skaters_controller.rb:7:in `index'
+Completed 200 OK in 6ms (Views: 4.5ms | ActiveRecord: 0.8ms | Allocations: 2894)
+
+
+Started GET "/api/v1/skaters" for ::1 at 2020-08-08 21:12:00 -0600
+Processing by Api::V1::SkatersController#index as HTML
+  [1m[36mSkater Load (0.3ms)[0m  [1m[34mSELECT "skaters".* FROM "skaters"[0m
+  ↳ app/controllers/api/v1/skaters_controller.rb:7:in `index'
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.3ms | Allocations: 2894)
+
+
+Started GET "/api/v1/skaters" for ::1 at 2020-08-08 21:12:10 -0600
+Processing by Api::V1::SkatersController#index as HTML
+  [1m[36mSkater Load (0.3ms)[0m  [1m[34mSELECT "skaters".* FROM "skaters"[0m
+  ↳ app/controllers/api/v1/skaters_controller.rb:7:in `index'
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.3ms | Allocations: 2895)
+
+
+Started GET "/api/v1/skaters" for ::1 at 2020-08-08 21:12:33 -0600
+Processing by Api::V1::SkatersController#index as HTML
+  [1m[36mSkater Load (0.3ms)[0m  [1m[34mSELECT "skaters".* FROM "skaters"[0m
+  ↳ app/controllers/api/v1/skaters_controller.rb:7:in `index'
+Completed 200 OK in 5ms (Views: 4.2ms | ActiveRecord: 0.3ms | Allocations: 2894)
+
+
+Started GET "/api/v1/skaters" for ::1 at 2020-08-08 21:13:18 -0600
+Processing by Api::V1::SkatersController#index as HTML
+  [1m[36mSkater Load (0.7ms)[0m  [1m[34mSELECT "skaters".* FROM "skaters"[0m
+  ↳ app/controllers/api/v1/skaters_controller.rb:7:in `index'
+Completed 200 OK in 5ms (Views: 4.1ms | ActiveRecord: 0.7ms | Allocations: 2894)
+
+
+Started GET "/api/v1/skaters" for ::1 at 2020-08-08 21:13:46 -0600
+Processing by Api::V1::SkatersController#index as HTML
+  [1m[36mSkater Load (3.6ms)[0m  [1m[34mSELECT "skaters".* FROM "skaters"[0m
+  ↳ app/controllers/api/v1/skaters_controller.rb:7:in `index'
+Completed 200 OK in 6ms (Views: 2.3ms | ActiveRecord: 3.6ms | Allocations: 2894)
+
+
+Started GET "/api/v1/skaters" for ::1 at 2020-08-08 21:13:52 -0600
+Processing by Api::V1::SkatersController#index as HTML
+  [1m[36mSkater Load (0.4ms)[0m  [1m[34mSELECT "skaters".* FROM "skaters"[0m
+  ↳ app/controllers/api/v1/skaters_controller.rb:7:in `index'
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.4ms | Allocations: 2894)
+
+
+Started GET "/api/v1/skaters" for ::1 at 2020-08-08 21:14:18 -0600
+Processing by Api::V1::SkatersController#index as HTML
+  [1m[36mSkater Load (0.6ms)[0m  [1m[34mSELECT "skaters".* FROM "skaters"[0m
+  ↳ app/controllers/api/v1/skaters_controller.rb:7:in `index'
+Completed 200 OK in 5ms (Views: 4.3ms | ActiveRecord: 0.6ms | Allocations: 2894)
+
+
+Started GET "/api/v1/skaters" for ::1 at 2020-08-08 21:14:23 -0600
+Processing by Api::V1::SkatersController#index as HTML
+  [1m[36mSkater Load (0.6ms)[0m  [1m[34mSELECT "skaters".* FROM "skaters"[0m
+  ↳ app/controllers/api/v1/skaters_controller.rb:7:in `index'
+Completed 200 OK in 5ms (Views: 3.7ms | ActiveRecord: 0.6ms | Allocations: 2894)
+
+
+Started GET "/api/v1/skaters" for ::1 at 2020-08-08 21:14:35 -0600
+Processing by Api::V1::SkatersController#index as HTML
+  [1m[36mSkater Load (0.7ms)[0m  [1m[34mSELECT "skaters".* FROM "skaters"[0m
+  ↳ app/controllers/api/v1/skaters_controller.rb:7:in `index'
+Completed 200 OK in 5ms (Views: 4.5ms | ActiveRecord: 0.7ms | Allocations: 2894)
+
+
+Started GET "/api/v1/skaters" for ::1 at 2020-08-08 21:14:57 -0600
+Processing by Api::V1::SkatersController#index as HTML
+  [1m[36mSkater Load (2.3ms)[0m  [1m[34mSELECT "skaters".* FROM "skaters"[0m
+  ↳ app/controllers/api/v1/skaters_controller.rb:7:in `index'
+Completed 200 OK in 6ms (Views: 3.4ms | ActiveRecord: 2.3ms | Allocations: 2894)
+
+
+Started GET "/api/v1/skaters" for ::1 at 2020-08-08 21:15:03 -0600
+Processing by Api::V1::SkatersController#index as HTML
+  [1m[36mSkater Load (0.4ms)[0m  [1m[34mSELECT "skaters".* FROM "skaters"[0m
+  ↳ app/controllers/api/v1/skaters_controller.rb:7:in `index'
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.4ms | Allocations: 2894)
+
+
+Started GET "/api/v1/skaters" for ::1 at 2020-08-08 21:15:06 -0600
+Processing by Api::V1::SkatersController#index as HTML
+  [1m[36mSkater Load (6.1ms)[0m  [1m[34mSELECT "skaters".* FROM "skaters"[0m
+  ↳ app/controllers/api/v1/skaters_controller.rb:7:in `index'
+Completed 200 OK in 10ms (Views: 3.2ms | ActiveRecord: 6.1ms | Allocations: 2894)
+
+
+Started GET "/api/v1/skaters" for ::1 at 2020-08-08 21:15:41 -0600
+Processing by Api::V1::SkatersController#index as HTML
+  [1m[36mSkater Load (3.5ms)[0m  [1m[34mSELECT "skaters".* FROM "skaters"[0m
+  ↳ app/controllers/api/v1/skaters_controller.rb:7:in `index'
+Completed 200 OK in 7ms (Views: 2.9ms | ActiveRecord: 3.5ms | Allocations: 2894)
+
+
+Started GET "/api/v1/skaters" for ::1 at 2020-08-08 21:15:46 -0600
+Processing by Api::V1::SkatersController#index as HTML
+  [1m[36mSkater Load (0.3ms)[0m  [1m[34mSELECT "skaters".* FROM "skaters"[0m
+  ↳ app/controllers/api/v1/skaters_controller.rb:7:in `index'
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.3ms | Allocations: 2894)
+
+
+Started GET "/api/v1/skaters" for ::1 at 2020-08-08 21:15:49 -0600
+Processing by Api::V1::SkatersController#index as HTML
+  [1m[36mSkater Load (0.3ms)[0m  [1m[34mSELECT "skaters".* FROM "skaters"[0m
+  ↳ app/controllers/api/v1/skaters_controller.rb:7:in `index'
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.3ms | Allocations: 2894)
+
+
+Started GET "/api/v1/skaters" for ::1 at 2020-08-08 21:15:51 -0600
+Processing by Api::V1::SkatersController#index as HTML
+  [1m[36mSkater Load (1.4ms)[0m  [1m[34mSELECT "skaters".* FROM "skaters"[0m
+  ↳ app/controllers/api/v1/skaters_controller.rb:7:in `index'
+Completed 200 OK in 5ms (Views: 3.7ms | ActiveRecord: 1.4ms | Allocations: 2894)
+
+
+Started GET "/api/v1/skaters" for ::1 at 2020-08-08 21:15:56 -0600
+Processing by Api::V1::SkatersController#index as HTML
+  [1m[36mSkater Load (0.4ms)[0m  [1m[34mSELECT "skaters".* FROM "skaters"[0m
+  ↳ app/controllers/api/v1/skaters_controller.rb:7:in `index'
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.4ms | Allocations: 2894)
+
+
+Started GET "/api/v1/skaters" for ::1 at 2020-08-08 21:16:02 -0600
+Processing by Api::V1::SkatersController#index as HTML
+  [1m[36mSkater Load (0.2ms)[0m  [1m[34mSELECT "skaters".* FROM "skaters"[0m
+  ↳ app/controllers/api/v1/skaters_controller.rb:7:in `index'
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.2ms | Allocations: 2894)
+
+
+Started GET "/api/v1/skaters" for ::1 at 2020-08-08 21:16:14 -0600
+Processing by Api::V1::SkatersController#index as HTML
+  [1m[36mSkater Load (3.5ms)[0m  [1m[34mSELECT "skaters".* FROM "skaters"[0m
+  ↳ app/controllers/api/v1/skaters_controller.rb:7:in `index'
+Completed 200 OK in 21ms (Views: 17.1ms | ActiveRecord: 3.5ms | Allocations: 2897)
+
+
+Started GET "/api/v1/skaters" for ::1 at 2020-08-08 21:16:25 -0600
+Processing by Api::V1::SkatersController#index as HTML
+  [1m[36mSkater Load (0.3ms)[0m  [1m[34mSELECT "skaters".* FROM "skaters"[0m
+  ↳ app/controllers/api/v1/skaters_controller.rb:7:in `index'
+Completed 200 OK in 4ms (Views: 4.0ms | ActiveRecord: 0.3ms | Allocations: 2894)
+
+
+Started GET "/api/v1/skaters" for ::1 at 2020-08-08 21:16:28 -0600
+Processing by Api::V1::SkatersController#index as HTML
+  [1m[36mSkater Load (0.4ms)[0m  [1m[34mSELECT "skaters".* FROM "skaters"[0m
+  ↳ app/controllers/api/v1/skaters_controller.rb:7:in `index'
+Completed 200 OK in 5ms (Views: 4.3ms | ActiveRecord: 0.4ms | Allocations: 2894)
+
+
+Started GET "/api/v1/skaters" for ::1 at 2020-08-08 21:16:36 -0600
+Processing by Api::V1::SkatersController#index as HTML
+  [1m[36mSkater Load (1.1ms)[0m  [1m[34mSELECT "skaters".* FROM "skaters"[0m
+  ↳ app/controllers/api/v1/skaters_controller.rb:7:in `index'
+Completed 200 OK in 6ms (Views: 4.1ms | ActiveRecord: 1.1ms | Allocations: 2894)
+
+
+Started GET "/api/v1/skaters" for ::1 at 2020-08-08 21:16:52 -0600
+Processing by Api::V1::SkatersController#index as HTML
+  [1m[36mSkater Load (0.3ms)[0m  [1m[34mSELECT "skaters".* FROM "skaters"[0m
+  ↳ app/controllers/api/v1/skaters_controller.rb:7:in `index'
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.3ms | Allocations: 2894)
+
+
+Started GET "/api/v1/skaters" for ::1 at 2020-08-08 21:16:53 -0600
+Processing by Api::V1::SkatersController#index as HTML
+  [1m[36mSkater Load (0.3ms)[0m  [1m[34mSELECT "skaters".* FROM "skaters"[0m
+  ↳ app/controllers/api/v1/skaters_controller.rb:7:in `index'
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.3ms | Allocations: 2894)
+
+
+Started GET "/api/v1/skaters" for ::1 at 2020-08-08 21:16:58 -0600
+Processing by Api::V1::SkatersController#index as HTML
+  [1m[36mSkater Load (0.3ms)[0m  [1m[34mSELECT "skaters".* FROM "skaters"[0m
+  ↳ app/controllers/api/v1/skaters_controller.rb:7:in `index'
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.3ms | Allocations: 2894)
+
+
+Started GET "/api/v1/skaters" for ::1 at 2020-08-08 21:18:29 -0600
+Processing by Api::V1::SkatersController#index as HTML
+  [1m[36mSkater Load (0.3ms)[0m  [1m[34mSELECT "skaters".* FROM "skaters"[0m
+  ↳ app/controllers/api/v1/skaters_controller.rb:7:in `index'
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.3ms | Allocations: 2894)
+
+
+Started GET "/api/v1/skaters" for ::1 at 2020-08-08 21:24:53 -0600
+Processing by Api::V1::SkatersController#index as HTML
+  [1m[36mSkater Load (0.9ms)[0m  [1m[34mSELECT "skaters".* FROM "skaters"[0m
+  ↳ app/controllers/api/v1/skaters_controller.rb:7:in `index'
+Completed 200 OK in 6ms (Views: 5.0ms | ActiveRecord: 0.9ms | Allocations: 2967)
+
+
+Started GET "/api/v1/skaters" for ::1 at 2020-08-08 21:24:55 -0600
+Processing by Api::V1::SkatersController#index as HTML
+  [1m[36mSkater Load (0.3ms)[0m  [1m[34mSELECT "skaters".* FROM "skaters"[0m
+  ↳ app/controllers/api/v1/skaters_controller.rb:7:in `index'
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.3ms | Allocations: 2894)
+
+
+Started GET "/api/v1/skaters" for ::1 at 2020-08-08 21:25:04 -0600
+Processing by Api::V1::SkatersController#index as HTML
+  [1m[36mSkater Load (1.7ms)[0m  [1m[34mSELECT "skaters".* FROM "skaters"[0m
+  ↳ app/controllers/api/v1/skaters_controller.rb:7:in `index'
+Completed 200 OK in 6ms (Views: 3.5ms | ActiveRecord: 1.7ms | Allocations: 2894)
+
+
+Started GET "/api/v1/skaters" for ::1 at 2020-08-08 21:25:15 -0600
+Processing by Api::V1::SkatersController#index as HTML
+  [1m[36mSkater Load (3.6ms)[0m  [1m[34mSELECT "skaters".* FROM "skaters"[0m
+  ↳ app/controllers/api/v1/skaters_controller.rb:7:in `index'
+Completed 200 OK in 7ms (Views: 3.1ms | ActiveRecord: 3.6ms | Allocations: 2894)
+
+
+Started GET "/api/v1/skaters" for ::1 at 2020-08-08 21:25:23 -0600
+Processing by Api::V1::SkatersController#index as HTML
+  [1m[36mSkater Load (0.9ms)[0m  [1m[34mSELECT "skaters".* FROM "skaters"[0m
+  ↳ app/controllers/api/v1/skaters_controller.rb:7:in `index'
+Completed 200 OK in 6ms (Views: 5.0ms | ActiveRecord: 0.9ms | Allocations: 2894)
+
+
+Started GET "/api/v1/skaters" for ::1 at 2020-08-08 21:25:32 -0600
+Processing by Api::V1::SkatersController#index as HTML
+  [1m[36mSkater Load (0.4ms)[0m  [1m[34mSELECT "skaters".* FROM "skaters"[0m
+  ↳ app/controllers/api/v1/skaters_controller.rb:7:in `index'
+Completed 200 OK in 6ms (Views: 4.8ms | ActiveRecord: 0.4ms | Allocations: 2894)
+
+
+Started GET "/api/v1/skaters" for ::1 at 2020-08-08 21:25:40 -0600
+Processing by Api::V1::SkatersController#index as HTML
+  [1m[36mSkater Load (13.6ms)[0m  [1m[34mSELECT "skaters".* FROM "skaters"[0m
+  ↳ app/controllers/api/v1/skaters_controller.rb:7:in `index'
+Completed 200 OK in 19ms (Views: 4.5ms | ActiveRecord: 13.6ms | Allocations: 2894)
+
+
+Started GET "/api/v1/skaters" for ::1 at 2020-08-08 21:26:31 -0600
+Processing by Api::V1::SkatersController#index as HTML
+  [1m[36mSkater Load (0.3ms)[0m  [1m[34mSELECT "skaters".* FROM "skaters"[0m
+  ↳ app/controllers/api/v1/skaters_controller.rb:7:in `index'
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.3ms | Allocations: 2894)
+
+
+Started GET "/api/v1/skaters" for ::1 at 2020-08-08 21:26:33 -0600
+Processing by Api::V1::SkatersController#index as HTML
+  [1m[36mSkater Load (1.2ms)[0m  [1m[34mSELECT "skaters".* FROM "skaters"[0m
+  ↳ app/controllers/api/v1/skaters_controller.rb:7:in `index'
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 1.2ms | Allocations: 2894)
+
+
+Started GET "/api/v1/skaters" for ::1 at 2020-08-08 21:26:45 -0600
+Processing by Api::V1::SkatersController#index as HTML
+  [1m[36mSkater Load (0.4ms)[0m  [1m[34mSELECT "skaters".* FROM "skaters"[0m
+  ↳ app/controllers/api/v1/skaters_controller.rb:7:in `index'
+Completed 200 OK in 12ms (Views: 3.5ms | ActiveRecord: 0.4ms | Allocations: 2897)
+
+
+Started GET "/api/v1/skaters" for ::1 at 2020-08-08 21:27:39 -0600
+Processing by Api::V1::SkatersController#index as HTML
+  [1m[36mSkater Load (2.9ms)[0m  [1m[34mSELECT "skaters".* FROM "skaters"[0m
+  ↳ app/controllers/api/v1/skaters_controller.rb:7:in `index'
+Completed 200 OK in 6ms (Views: 3.0ms | ActiveRecord: 2.9ms | Allocations: 2894)
+
+
+Started GET "/api/v1/skaters" for ::1 at 2020-08-08 21:27:44 -0600
+Processing by Api::V1::SkatersController#index as HTML
+  [1m[36mSkater Load (0.9ms)[0m  [1m[34mSELECT "skaters".* FROM "skaters"[0m
+  ↳ app/controllers/api/v1/skaters_controller.rb:7:in `index'
+Completed 200 OK in 5ms (Views: 3.5ms | ActiveRecord: 0.9ms | Allocations: 2894)
+
+
+Started GET "/api/v1/skaters" for ::1 at 2020-08-08 21:27:54 -0600
+Processing by Api::V1::SkatersController#index as HTML
+  [1m[36mSkater Load (1.0ms)[0m  [1m[34mSELECT "skaters".* FROM "skaters"[0m
+  ↳ app/controllers/api/v1/skaters_controller.rb:7:in `index'
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 1.0ms | Allocations: 2894)
+
+
+Started GET "/api/v1/skaters" for ::1 at 2020-08-08 21:29:58 -0600
+Processing by Api::V1::SkatersController#index as HTML
+  [1m[36mSkater Load (5.0ms)[0m  [1m[34mSELECT "skaters".* FROM "skaters"[0m
+  ↳ app/controllers/api/v1/skaters_controller.rb:7:in `index'
+Completed 200 OK in 9ms (Views: 3.4ms | ActiveRecord: 5.0ms | Allocations: 2894)
+
+
+Started GET "/api/v1/skaters" for ::1 at 2020-08-08 21:30:04 -0600
+Processing by Api::V1::SkatersController#index as HTML
+  [1m[36mSkater Load (0.2ms)[0m  [1m[34mSELECT "skaters".* FROM "skaters"[0m
+  ↳ app/controllers/api/v1/skaters_controller.rb:7:in `index'
+Completed 200 OK in 4ms (Views: 3.4ms | ActiveRecord: 0.2ms | Allocations: 2894)
+
+
+Started GET "/api/v1/skaters" for ::1 at 2020-08-08 21:30:18 -0600
+Processing by Api::V1::SkatersController#index as HTML
+  [1m[36mSkater Load (0.7ms)[0m  [1m[34mSELECT "skaters".* FROM "skaters"[0m
+  ↳ app/controllers/api/v1/skaters_controller.rb:7:in `index'
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.7ms | Allocations: 2894)
+
+
+Started GET "/api/v1/skaters" for ::1 at 2020-08-08 21:30:27 -0600
+Processing by Api::V1::SkatersController#index as HTML
+  [1m[36mSkater Load (0.2ms)[0m  [1m[34mSELECT "skaters".* FROM "skaters"[0m
+  ↳ app/controllers/api/v1/skaters_controller.rb:7:in `index'
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.2ms | Allocations: 2894)
+
+
+Started GET "/api/v1/skaters" for ::1 at 2020-08-08 21:30:42 -0600
+Processing by Api::V1::SkatersController#index as HTML
+  [1m[36mSkater Load (9.1ms)[0m  [1m[34mSELECT "skaters".* FROM "skaters"[0m
+  ↳ app/controllers/api/v1/skaters_controller.rb:7:in `index'
+Completed 200 OK in 13ms (Views: 3.2ms | ActiveRecord: 9.1ms | Allocations: 2894)
+
+
+Started GET "/api/v1/skaters" for ::1 at 2020-08-08 21:30:50 -0600
+Processing by Api::V1::SkatersController#index as HTML
+  [1m[36mSkater Load (0.5ms)[0m  [1m[34mSELECT "skaters".* FROM "skaters"[0m
+  ↳ app/controllers/api/v1/skaters_controller.rb:7:in `index'
+Completed 200 OK in 4ms (Views: 3.6ms | ActiveRecord: 0.5ms | Allocations: 2894)
+
+
+Started GET "/api/v1/skaters" for ::1 at 2020-08-08 21:31:05 -0600
+Processing by Api::V1::SkatersController#index as HTML
+  [1m[36mSkater Load (0.2ms)[0m  [1m[34mSELECT "skaters".* FROM "skaters"[0m
+  ↳ app/controllers/api/v1/skaters_controller.rb:7:in `index'
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.2ms | Allocations: 2894)
+
+
+Started GET "/api/v1/skaters" for ::1 at 2020-08-08 21:31:27 -0600
+Processing by Api::V1::SkatersController#index as HTML
+  [1m[36mSkater Load (0.4ms)[0m  [1m[34mSELECT "skaters".* FROM "skaters"[0m
+  ↳ app/controllers/api/v1/skaters_controller.rb:7:in `index'
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.4ms | Allocations: 2894)
+
+
+Started GET "/api/v1/skaters" for ::1 at 2020-08-08 21:31:32 -0600
+Processing by Api::V1::SkatersController#index as HTML
+  [1m[36mSkater Load (0.4ms)[0m  [1m[34mSELECT "skaters".* FROM "skaters"[0m
+  ↳ app/controllers/api/v1/skaters_controller.rb:7:in `index'
+Completed 200 OK in 5ms (Views: 4.7ms | ActiveRecord: 0.4ms | Allocations: 2894)
+
+
+Started GET "/api/v1/skaters" for ::1 at 2020-08-08 21:31:45 -0600
+Processing by Api::V1::SkatersController#index as HTML
+  [1m[36mSkater Load (1.0ms)[0m  [1m[34mSELECT "skaters".* FROM "skaters"[0m
+  ↳ app/controllers/api/v1/skaters_controller.rb:7:in `index'
+Completed 200 OK in 6ms (Views: 3.9ms | ActiveRecord: 1.0ms | Allocations: 2894)
+
+
+Started GET "/api/v1/skaters" for ::1 at 2020-08-08 21:35:04 -0600
+Processing by Api::V1::SkatersController#index as HTML
+  [1m[36mSkater Load (1.0ms)[0m  [1m[34mSELECT "skaters".* FROM "skaters"[0m
+  ↳ app/controllers/api/v1/skaters_controller.rb:7:in `index'
+Completed 200 OK in 6ms (Views: 5.0ms | ActiveRecord: 1.0ms | Allocations: 2894)
+
+
+Started GET "/api/v1/skaters" for ::1 at 2020-08-08 21:35:08 -0600
+Processing by Api::V1::SkatersController#index as HTML
+  [1m[36mSkater Load (0.9ms)[0m  [1m[34mSELECT "skaters".* FROM "skaters"[0m
+  ↳ app/controllers/api/v1/skaters_controller.rb:7:in `index'
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.9ms | Allocations: 2894)
+
+
+Started GET "/api/v1/skaters" for ::1 at 2020-08-08 21:35:14 -0600
+Processing by Api::V1::SkatersController#index as HTML
+  [1m[36mSkater Load (0.2ms)[0m  [1m[34mSELECT "skaters".* FROM "skaters"[0m
+  ↳ app/controllers/api/v1/skaters_controller.rb:7:in `index'
+Completed 200 OK in 14ms (Views: 14.0ms | ActiveRecord: 0.2ms | Allocations: 2897)
+
+
+Started GET "/api/v1/skaters" for ::1 at 2020-08-08 21:35:29 -0600
+Processing by Api::V1::SkatersController#index as HTML
+  [1m[36mSkater Load (5.6ms)[0m  [1m[34mSELECT "skaters".* FROM "skaters"[0m
+  ↳ app/controllers/api/v1/skaters_controller.rb:7:in `index'
+Completed 200 OK in 10ms (Views: 4.2ms | ActiveRecord: 5.6ms | Allocations: 2894)
+
+
+Started GET "/api/v1/skaters" for ::1 at 2020-08-08 21:35:37 -0600
+Processing by Api::V1::SkatersController#index as HTML
+  [1m[36mSkater Load (2.5ms)[0m  [1m[34mSELECT "skaters".* FROM "skaters"[0m
+  ↳ app/controllers/api/v1/skaters_controller.rb:7:in `index'
+Completed 200 OK in 7ms (Views: 4.1ms | ActiveRecord: 2.5ms | Allocations: 2894)
+
+
+Started GET "/api/v1/skaters" for ::1 at 2020-08-08 21:35:46 -0600
+Processing by Api::V1::SkatersController#index as HTML
+  [1m[36mSkater Load (0.3ms)[0m  [1m[34mSELECT "skaters".* FROM "skaters"[0m
+  ↳ app/controllers/api/v1/skaters_controller.rb:7:in `index'
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.3ms | Allocations: 2894)
+
+
+Started GET "/api/v1/skaters" for ::1 at 2020-08-08 21:35:53 -0600
+Processing by Api::V1::SkatersController#index as HTML
+  [1m[36mSkater Load (5.6ms)[0m  [1m[34mSELECT "skaters".* FROM "skaters"[0m
+  ↳ app/controllers/api/v1/skaters_controller.rb:7:in `index'
+Completed 200 OK in 9ms (Views: 3.5ms | ActiveRecord: 5.6ms | Allocations: 2894)
+
+
+Started GET "/api/v1/skaters" for ::1 at 2020-08-08 21:36:07 -0600
+Processing by Api::V1::SkatersController#index as HTML
+  [1m[36mSkater Load (0.2ms)[0m  [1m[34mSELECT "skaters".* FROM "skaters"[0m
+  ↳ app/controllers/api/v1/skaters_controller.rb:7:in `index'
+Completed 200 OK in 5ms (Views: 4.1ms | ActiveRecord: 0.2ms | Allocations: 2894)
+
+
+Started GET "/api/v1/skaters" for ::1 at 2020-08-08 21:36:20 -0600
+Processing by Api::V1::SkatersController#index as HTML
+  [1m[36mSkater Load (0.4ms)[0m  [1m[34mSELECT "skaters".* FROM "skaters"[0m
+  ↳ app/controllers/api/v1/skaters_controller.rb:7:in `index'
+Completed 200 OK in 4ms (Views: 3.7ms | ActiveRecord: 0.4ms | Allocations: 2894)
+
+
+Started GET "/api/v1/skaters" for ::1 at 2020-08-08 21:36:44 -0600
+Processing by Api::V1::SkatersController#index as HTML
+  [1m[36mSkater Load (0.4ms)[0m  [1m[34mSELECT "skaters".* FROM "skaters"[0m
+  ↳ app/controllers/api/v1/skaters_controller.rb:7:in `index'
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.4ms | Allocations: 2894)
+
+
+Started GET "/api/v1/skaters" for ::1 at 2020-08-08 21:36:58 -0600
+Processing by Api::V1::SkatersController#index as HTML
+  [1m[36mSkater Load (6.3ms)[0m  [1m[34mSELECT "skaters".* FROM "skaters"[0m
+  ↳ app/controllers/api/v1/skaters_controller.rb:7:in `index'
+Completed 200 OK in 10ms (Views: 3.7ms | ActiveRecord: 6.3ms | Allocations: 2894)
+
+
+Started GET "/api/v1/skaters" for ::1 at 2020-08-08 21:37:05 -0600
+Processing by Api::V1::SkatersController#index as HTML
+  [1m[36mSkater Load (5.6ms)[0m  [1m[34mSELECT "skaters".* FROM "skaters"[0m
+  ↳ app/controllers/api/v1/skaters_controller.rb:7:in `index'
+Completed 200 OK in 8ms (Views: 2.4ms | ActiveRecord: 5.6ms | Allocations: 2894)
+
+
+Started GET "/api/v1/skaters" for ::1 at 2020-08-08 21:37:21 -0600
+Processing by Api::V1::SkatersController#index as HTML
+  [1m[36mSkater Load (0.7ms)[0m  [1m[34mSELECT "skaters".* FROM "skaters"[0m
+  ↳ app/controllers/api/v1/skaters_controller.rb:7:in `index'
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.7ms | Allocations: 2894)
+
+
+Started GET "/api/v1/skaters" for ::1 at 2020-08-08 21:37:25 -0600
+Processing by Api::V1::SkatersController#index as HTML
+  [1m[36mSkater Load (1.5ms)[0m  [1m[34mSELECT "skaters".* FROM "skaters"[0m
+  ↳ app/controllers/api/v1/skaters_controller.rb:7:in `index'
+Completed 200 OK in 6ms (Views: 4.4ms | ActiveRecord: 1.5ms | Allocations: 2894)
+
+
+Started GET "/api/v1/skaters" for ::1 at 2020-08-08 21:37:35 -0600
+Processing by Api::V1::SkatersController#index as HTML
+  [1m[36mSkater Load (0.2ms)[0m  [1m[34mSELECT "skaters".* FROM "skaters"[0m
+  ↳ app/controllers/api/v1/skaters_controller.rb:7:in `index'
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.2ms | Allocations: 2894)
+
+
+Started GET "/api/v1/skaters" for ::1 at 2020-08-08 21:37:58 -0600
+Processing by Api::V1::SkatersController#index as HTML
+  [1m[36mSkater Load (0.3ms)[0m  [1m[34mSELECT "skaters".* FROM "skaters"[0m
+  ↳ app/controllers/api/v1/skaters_controller.rb:7:in `index'
+Completed 200 OK in 2ms (Views: 2.0ms | ActiveRecord: 0.3ms | Allocations: 2894)
+
+
+Started GET "/api/v1/skaters" for ::1 at 2020-08-08 21:38:21 -0600
+Processing by Api::V1::SkatersController#index as HTML
+  [1m[36mSkater Load (0.5ms)[0m  [1m[34mSELECT "skaters".* FROM "skaters"[0m
+  ↳ app/controllers/api/v1/skaters_controller.rb:7:in `index'
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.5ms | Allocations: 2894)
+
+
+Started GET "/api/v1/skaters" for ::1 at 2020-08-08 21:38:31 -0600
+Processing by Api::V1::SkatersController#index as HTML
+  [1m[36mSkater Load (0.3ms)[0m  [1m[34mSELECT "skaters".* FROM "skaters"[0m
+  ↳ app/controllers/api/v1/skaters_controller.rb:7:in `index'
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.3ms | Allocations: 2894)
+
+
+Started GET "/api/v1/skaters" for ::1 at 2020-08-08 21:40:20 -0600
+Processing by Api::V1::SkatersController#index as HTML
+  [1m[36mSkater Load (10.4ms)[0m  [1m[34mSELECT "skaters".* FROM "skaters"[0m
+  ↳ app/controllers/api/v1/skaters_controller.rb:7:in `index'
+Completed 200 OK in 14ms (Views: 3.6ms | ActiveRecord: 10.4ms | Allocations: 2897)
+
+
+Started GET "/api/v1/skaters" for ::1 at 2020-08-08 21:40:24 -0600
+Processing by Api::V1::SkatersController#index as HTML
+  [1m[36mSkater Load (0.5ms)[0m  [1m[34mSELECT "skaters".* FROM "skaters"[0m
+  ↳ app/controllers/api/v1/skaters_controller.rb:7:in `index'
+Completed 200 OK in 17ms (Views: 16.5ms | ActiveRecord: 0.5ms | Allocations: 2897)
+
+
+Started GET "/api/v1/skaters" for ::1 at 2020-08-08 21:40:27 -0600
+Processing by Api::V1::SkatersController#index as HTML
+  [1m[36mSkater Load (0.5ms)[0m  [1m[34mSELECT "skaters".* FROM "skaters"[0m
+  ↳ app/controllers/api/v1/skaters_controller.rb:7:in `index'
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.5ms | Allocations: 2894)
+
+
+Started GET "/api/v1/skaters" for ::1 at 2020-08-08 21:40:31 -0600
+Processing by Api::V1::SkatersController#index as HTML
+  [1m[36mSkater Load (1.3ms)[0m  [1m[34mSELECT "skaters".* FROM "skaters"[0m
+  ↳ app/controllers/api/v1/skaters_controller.rb:7:in `index'
+Completed 200 OK in 7ms (Views: 5.5ms | ActiveRecord: 1.3ms | Allocations: 2894)
+
+
+Started GET "/api/v1/skaters" for ::1 at 2020-08-08 21:42:37 -0600
+Processing by Api::V1::SkatersController#index as HTML
+  [1m[36mSkater Load (0.3ms)[0m  [1m[34mSELECT "skaters".* FROM "skaters"[0m
+  ↳ app/controllers/api/v1/skaters_controller.rb:7:in `index'
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.3ms | Allocations: 2894)
+
+
+Started GET "/api/v1/skaters" for ::1 at 2020-08-08 21:42:48 -0600
+Processing by Api::V1::SkatersController#index as HTML
+  [1m[36mSkater Load (0.2ms)[0m  [1m[34mSELECT "skaters".* FROM "skaters"[0m
+  ↳ app/controllers/api/v1/skaters_controller.rb:7:in `index'
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.2ms | Allocations: 2894)
+
+
+Started GET "/api/v1/skaters" for ::1 at 2020-08-08 21:42:52 -0600
+Processing by Api::V1::SkatersController#index as HTML
+  [1m[36mSkater Load (0.4ms)[0m  [1m[34mSELECT "skaters".* FROM "skaters"[0m
+  ↳ app/controllers/api/v1/skaters_controller.rb:7:in `index'
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.4ms | Allocations: 2894)
+
+
+Started GET "/api/v1/skaters" for ::1 at 2020-08-08 21:43:05 -0600
+Processing by Api::V1::SkatersController#index as HTML
+  [1m[36mSkater Load (0.5ms)[0m  [1m[34mSELECT "skaters".* FROM "skaters"[0m
+  ↳ app/controllers/api/v1/skaters_controller.rb:7:in `index'
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.5ms | Allocations: 2894)
+
+
+Started GET "/api/v1/skaters" for ::1 at 2020-08-08 21:43:12 -0600
+Processing by Api::V1::SkatersController#index as HTML
+  [1m[36mSkater Load (5.0ms)[0m  [1m[34mSELECT "skaters".* FROM "skaters"[0m
+  ↳ app/controllers/api/v1/skaters_controller.rb:7:in `index'
+Completed 200 OK in 10ms (Views: 5.1ms | ActiveRecord: 5.0ms | Allocations: 2894)
+
+
+Started GET "/api/v1/skaters" for ::1 at 2020-08-08 21:43:32 -0600
+Processing by Api::V1::SkatersController#index as HTML
+  [1m[36mSkater Load (0.9ms)[0m  [1m[34mSELECT "skaters".* FROM "skaters"[0m
+  ↳ app/controllers/api/v1/skaters_controller.rb:7:in `index'
+Completed 200 OK in 4ms (Views: 2.3ms | ActiveRecord: 0.9ms | Allocations: 2894)
+
+
+Started GET "/api/v1/skaters" for ::1 at 2020-08-08 21:43:52 -0600
+Processing by Api::V1::SkatersController#index as HTML
+  [1m[36mSkater Load (0.5ms)[0m  [1m[34mSELECT "skaters".* FROM "skaters"[0m
+  ↳ app/controllers/api/v1/skaters_controller.rb:7:in `index'
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.5ms | Allocations: 2894)
+
+
+Started GET "/api/v1/skaters" for ::1 at 2020-08-08 21:43:59 -0600
+Processing by Api::V1::SkatersController#index as HTML
+  [1m[36mSkater Load (0.4ms)[0m  [1m[34mSELECT "skaters".* FROM "skaters"[0m
+  ↳ app/controllers/api/v1/skaters_controller.rb:7:in `index'
+Completed 200 OK in 4ms (Views: 3.6ms | ActiveRecord: 0.4ms | Allocations: 2894)
+
+
+Started GET "/api/v1/skaters" for ::1 at 2020-08-08 21:44:35 -0600
+Processing by Api::V1::SkatersController#index as HTML
+  [1m[36mSkater Load (0.5ms)[0m  [1m[34mSELECT "skaters".* FROM "skaters"[0m
+  ↳ app/controllers/api/v1/skaters_controller.rb:7:in `index'
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.5ms | Allocations: 2894)
+
+
+Started GET "/api/v1/skaters" for ::1 at 2020-08-08 21:44:41 -0600
+Processing by Api::V1::SkatersController#index as HTML
+  [1m[36mSkater Load (0.2ms)[0m  [1m[34mSELECT "skaters".* FROM "skaters"[0m
+  ↳ app/controllers/api/v1/skaters_controller.rb:7:in `index'
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.2ms | Allocations: 2894)
+
+
+Started GET "/api/v1/skaters" for ::1 at 2020-08-08 21:44:47 -0600
+Processing by Api::V1::SkatersController#index as HTML
+  [1m[36mSkater Load (0.8ms)[0m  [1m[34mSELECT "skaters".* FROM "skaters"[0m
+  ↳ app/controllers/api/v1/skaters_controller.rb:7:in `index'
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.8ms | Allocations: 2894)
+
+
+Started GET "/api/v1/skaters" for ::1 at 2020-08-08 21:45:22 -0600
+Processing by Api::V1::SkatersController#index as HTML
+  [1m[36mSkater Load (2.1ms)[0m  [1m[34mSELECT "skaters".* FROM "skaters"[0m
+  ↳ app/controllers/api/v1/skaters_controller.rb:7:in `index'
+Completed 200 OK in 5ms (Views: 3.1ms | ActiveRecord: 2.1ms | Allocations: 2894)
+
+
+Started GET "/api/v1/skaters" for ::1 at 2020-08-08 21:46:56 -0600
+Processing by Api::V1::SkatersController#index as HTML
+  [1m[36mSkater Load (0.7ms)[0m  [1m[34mSELECT "skaters".* FROM "skaters"[0m
+  ↳ app/controllers/api/v1/skaters_controller.rb:7:in `index'
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.7ms | Allocations: 2894)
+
+
+Started GET "/api/v1/skaters" for ::1 at 2020-08-08 21:47:00 -0600
+Processing by Api::V1::SkatersController#index as HTML
+  [1m[36mSkater Load (0.4ms)[0m  [1m[34mSELECT "skaters".* FROM "skaters"[0m
+  ↳ app/controllers/api/v1/skaters_controller.rb:7:in `index'
+Completed 200 OK in 12ms (Views: 11.7ms | ActiveRecord: 0.4ms | Allocations: 2897)
+
+
+Started GET "/api/v1/skaters" for ::1 at 2020-08-08 21:47:21 -0600
+Processing by Api::V1::SkatersController#index as HTML
+  [1m[36mSkater Load (0.3ms)[0m  [1m[34mSELECT "skaters".* FROM "skaters"[0m
+  ↳ app/controllers/api/v1/skaters_controller.rb:7:in `index'
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.3ms | Allocations: 2894)
+
+
+Started GET "/api/v1/skaters" for ::1 at 2020-08-08 21:47:41 -0600
+Processing by Api::V1::SkatersController#index as HTML
+  [1m[36mSkater Load (2.2ms)[0m  [1m[34mSELECT "skaters".* FROM "skaters"[0m
+  ↳ app/controllers/api/v1/skaters_controller.rb:7:in `index'
+Completed 200 OK in 6ms (Views: 3.3ms | ActiveRecord: 2.2ms | Allocations: 2894)
+
+
+Started GET "/api/v1/skaters" for ::1 at 2020-08-08 21:48:00 -0600
+Processing by Api::V1::SkatersController#index as HTML
+  [1m[36mSkater Load (0.3ms)[0m  [1m[34mSELECT "skaters".* FROM "skaters"[0m
+  ↳ app/controllers/api/v1/skaters_controller.rb:7:in `index'
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.3ms | Allocations: 2894)
+
+
+Started GET "/api/v1/skaters" for ::1 at 2020-08-08 21:48:09 -0600
+Processing by Api::V1::SkatersController#index as HTML
+  [1m[36mSkater Load (0.3ms)[0m  [1m[34mSELECT "skaters".* FROM "skaters"[0m
+  ↳ app/controllers/api/v1/skaters_controller.rb:7:in `index'
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.3ms | Allocations: 2894)
+
+
+Started GET "/api/v1/skaters" for ::1 at 2020-08-08 21:48:12 -0600
+Processing by Api::V1::SkatersController#index as HTML
+  [1m[36mSkater Load (0.3ms)[0m  [1m[34mSELECT "skaters".* FROM "skaters"[0m
+  ↳ app/controllers/api/v1/skaters_controller.rb:7:in `index'
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.3ms | Allocations: 2894)
+
+
+Started GET "/api/v1/skaters" for ::1 at 2020-08-08 21:48:17 -0600
+Processing by Api::V1::SkatersController#index as HTML
+  [1m[36mSkater Load (0.4ms)[0m  [1m[34mSELECT "skaters".* FROM "skaters"[0m
+  ↳ app/controllers/api/v1/skaters_controller.rb:7:in `index'
+Completed 200 OK in 4ms (Views: 3.5ms | ActiveRecord: 0.4ms | Allocations: 2894)
+
+
+Started GET "/api/v1/skaters" for ::1 at 2020-08-08 21:48:29 -0600
+Processing by Api::V1::SkatersController#index as HTML
+  [1m[36mSkater Load (0.7ms)[0m  [1m[34mSELECT "skaters".* FROM "skaters"[0m
+  ↳ app/controllers/api/v1/skaters_controller.rb:7:in `index'
+Completed 200 OK in 5ms (Views: 3.8ms | ActiveRecord: 0.7ms | Allocations: 2894)
+
+
+Started GET "/api/v1/skaters" for ::1 at 2020-08-08 21:50:13 -0600
+Processing by Api::V1::SkatersController#index as HTML
+  [1m[36mSkater Load (0.3ms)[0m  [1m[34mSELECT "skaters".* FROM "skaters"[0m
+  ↳ app/controllers/api/v1/skaters_controller.rb:7:in `index'
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.3ms | Allocations: 2894)
+
+
+Started GET "/api/v1/skaters" for ::1 at 2020-08-08 21:50:15 -0600
+Processing by Api::V1::SkatersController#index as HTML
+  [1m[36mSkater Load (0.8ms)[0m  [1m[34mSELECT "skaters".* FROM "skaters"[0m
+  ↳ app/controllers/api/v1/skaters_controller.rb:7:in `index'
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.8ms | Allocations: 2894)
+
+
+Started GET "/api/v1/skaters" for ::1 at 2020-08-08 21:50:57 -0600
+Processing by Api::V1::SkatersController#index as HTML
+  [1m[36mSkater Load (1.7ms)[0m  [1m[34mSELECT "skaters".* FROM "skaters"[0m
+  ↳ app/controllers/api/v1/skaters_controller.rb:7:in `index'
+Completed 200 OK in 5ms (Views: 3.2ms | ActiveRecord: 1.7ms | Allocations: 2894)
+
+
+Started GET "/api/v1/skaters" for ::1 at 2020-08-08 21:51:29 -0600
+Processing by Api::V1::SkatersController#index as HTML
+  [1m[36mSkater Load (1.1ms)[0m  [1m[34mSELECT "skaters".* FROM "skaters"[0m
+  ↳ app/controllers/api/v1/skaters_controller.rb:7:in `index'
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 1.1ms | Allocations: 2894)
+
+
+Started GET "/api/v1/skaters" for ::1 at 2020-08-08 21:51:36 -0600
+Processing by Api::V1::SkatersController#index as HTML
+  [1m[36mSkater Load (4.5ms)[0m  [1m[34mSELECT "skaters".* FROM "skaters"[0m
+  ↳ app/controllers/api/v1/skaters_controller.rb:7:in `index'
+Completed 200 OK in 7ms (Views: 2.7ms | ActiveRecord: 4.5ms | Allocations: 2894)
+
+
+Started GET "/api/v1/skaters" for ::1 at 2020-08-08 21:51:50 -0600
+Processing by Api::V1::SkatersController#index as HTML
+  [1m[36mSkater Load (0.3ms)[0m  [1m[34mSELECT "skaters".* FROM "skaters"[0m
+  ↳ app/controllers/api/v1/skaters_controller.rb:7:in `index'
+Completed 200 OK in 4ms (Views: 3.7ms | ActiveRecord: 0.3ms | Allocations: 2894)
+
+
+Started GET "/api/v1/skaters" for ::1 at 2020-08-08 21:52:20 -0600
+Processing by Api::V1::SkatersController#index as HTML
+  [1m[36mSkater Load (0.5ms)[0m  [1m[34mSELECT "skaters".* FROM "skaters"[0m
+  ↳ app/controllers/api/v1/skaters_controller.rb:7:in `index'
+Completed 200 OK in 5ms (Views: 3.7ms | ActiveRecord: 0.5ms | Allocations: 2894)
+
+
+Started GET "/api/v1/skaters" for ::1 at 2020-08-08 21:52:29 -0600
+Processing by Api::V1::SkatersController#index as HTML
+  [1m[36mSkater Load (0.4ms)[0m  [1m[34mSELECT "skaters".* FROM "skaters"[0m
+  ↳ app/controllers/api/v1/skaters_controller.rb:7:in `index'
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.4ms | Allocations: 2894)
+
+
+Started GET "/api/v1/skaters" for ::1 at 2020-08-08 21:52:41 -0600
+Processing by Api::V1::SkatersController#index as HTML
+  [1m[36mSkater Load (0.4ms)[0m  [1m[34mSELECT "skaters".* FROM "skaters"[0m
+  ↳ app/controllers/api/v1/skaters_controller.rb:7:in `index'
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.4ms | Allocations: 2895)
+
+
+Started GET "/api/v1/skaters" for ::1 at 2020-08-08 21:55:36 -0600
+Processing by Api::V1::SkatersController#index as HTML
+  [1m[36mSkater Load (0.3ms)[0m  [1m[34mSELECT "skaters".* FROM "skaters"[0m
+  ↳ app/controllers/api/v1/skaters_controller.rb:7:in `index'
+Completed 200 OK in 5ms (Views: 4.7ms | ActiveRecord: 0.3ms | Allocations: 2894)
+
+
+Started GET "/api/v1/skaters" for ::1 at 2020-08-08 21:56:19 -0600
+Processing by Api::V1::SkatersController#index as HTML
+  [1m[36mSkater Load (0.3ms)[0m  [1m[34mSELECT "skaters".* FROM "skaters"[0m
+  ↳ app/controllers/api/v1/skaters_controller.rb:7:in `index'
+Completed 500 Internal Server Error in 32ms (ActiveRecord: 12.1ms | Allocations: 7695)
+
+
+  
+NoMethodError (undefined method `stance_name' for #<Skater:0x00007fc738ba4e90>
+Did you mean?  stance):
+  
+app/controllers/api/v1/skaters_controller.rb:7:in `index'
+Started GET "/api/v1/skaters" for ::1 at 2020-08-08 21:57:10 -0600
+Processing by Api::V1::SkatersController#index as HTML
+  [1m[36mSkater Load (0.3ms)[0m  [1m[34mSELECT "skaters".* FROM "skaters"[0m
+  ↳ app/controllers/api/v1/skaters_controller.rb:7:in `index'
+Completed 500 Internal Server Error in 64ms (ActiveRecord: 4.8ms | Allocations: 11361)
+
+
+  
+ActiveRecord::StatementInvalid (PG::UndefinedColumn: ERROR:  column stances.skater_id does not exist
+LINE 1: SELECT "stances".* FROM "stances" WHERE "stances"."skater_id...
+                                                ^
+):
+  
+app/controllers/api/v1/skaters_controller.rb:7:in `index'
+Started GET "/api/v1/skaters" for ::1 at 2020-08-08 21:57:45 -0600
+Processing by Api::V1::SkatersController#index as HTML
+  [1m[36mSkater Load (0.4ms)[0m  [1m[34mSELECT "skaters".* FROM "skaters"[0m
+  ↳ app/controllers/api/v1/skaters_controller.rb:7:in `index'
+Completed 200 OK in 16ms (Views: 8.6ms | ActiveRecord: 5.1ms | Allocations: 7671)
+
+
+Started GET "/api/v1/skaters" for ::1 at 2020-08-08 21:58:06 -0600
+Processing by Api::V1::SkatersController#index as HTML
+  [1m[36mSkater Load (0.3ms)[0m  [1m[34mSELECT "skaters".* FROM "skaters"[0m
+  ↳ app/controllers/api/v1/skaters_controller.rb:7:in `index'
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 3.3ms | Allocations: 7557)
+
+
+  
+NoMethodError (undefined method `stance_name' for #<Skater:0x00007fc738cb65e0>
+Did you mean?  stance):
+  
+app/controllers/api/v1/skaters_controller.rb:7:in `index'
+Started GET "/api/v1/skaters" for ::1 at 2020-08-08 21:58:15 -0600
+Processing by Api::V1::SkatersController#index as HTML
+  [1m[36mSkater Load (0.3ms)[0m  [1m[34mSELECT "skaters".* FROM "skaters"[0m
+  ↳ app/controllers/api/v1/skaters_controller.rb:7:in `index'
+Completed 200 OK in 16ms (Views: 8.5ms | ActiveRecord: 5.1ms | Allocations: 7656)
+
+
+Started GET "/favicon.ico" for ::1 at 2020-08-08 21:58:16 -0600
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (6.0.3) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3) lib/rails/engine.rb:527:in `call'
+puma (4.3.3) lib/puma/configuration.rb:228:in `call'
+puma (4.3.3) lib/puma/server.rb:682:in `handle_request'
+puma (4.3.3) lib/puma/server.rb:472:in `process_client'
+puma (4.3.3) lib/puma/server.rb:328:in `block in run'
+puma (4.3.3) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/api/v1/skaters" for ::1 at 2020-08-08 21:58:39 -0600
+Processing by Api::V1::SkatersController#index as HTML
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 786)
+
+
+  
+SyntaxError (/Users/freddysilber/Documents/GitHub/skate-api/app/serializers/skater_serializer.rb:5: syntax error, unexpected ':', expecting end
+	relationships: stance
+	             ^):
+  
+app/serializers/skater_serializer.rb:5: syntax error, unexpected ':', expecting end
+app/serializers/skater_serializer.rb:5: syntax error, unexpected ':', expecting end
+app/controllers/api/v1/skaters_controller.rb:7:in `index'
+Started GET "/api/v1/skaters" for ::1 at 2020-08-08 22:00:08 -0600
+Processing by Api::V1::SkatersController#index as HTML
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms | Allocations: 2068)
+
+
+  
+NoMethodError (undefined method `stance' for SkaterSerializer:Class):
+  
+app/serializers/skater_serializer.rb:4:in `<class:SkaterSerializer>'
+app/serializers/skater_serializer.rb:1:in `<main>'
+app/controllers/api/v1/skaters_controller.rb:7:in `index'
+Started GET "/api/v1/skaters" for ::1 at 2020-08-08 22:00:15 -0600
+Processing by Api::V1::SkatersController#index as HTML
+  [1m[36mSkater Load (0.3ms)[0m  [1m[34mSELECT "skaters".* FROM "skaters"[0m
+  ↳ app/controllers/api/v1/skaters_controller.rb:7:in `index'
+Completed 200 OK in 27ms (Views: 18.4ms | ActiveRecord: 6.7ms | Allocations: 7656)
+
+
+Started GET "/api/v1/skaters" for ::1 at 2020-08-08 22:00:17 -0600
+Processing by Api::V1::SkatersController#index as HTML
+  [1m[36mSkater Load (0.3ms)[0m  [1m[34mSELECT "skaters".* FROM "skaters"[0m
+  ↳ app/controllers/api/v1/skaters_controller.rb:7:in `index'
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.3ms | Allocations: 2894)
+
+
+Started GET "/api/v1/skaters" for ::1 at 2020-08-08 22:04:51 -0600
+Processing by Api::V1::SkatersController#index as HTML
+  [1m[36mSkater Load (0.4ms)[0m  [1m[34mSELECT "skaters".* FROM "skaters"[0m
+  ↳ app/controllers/api/v1/skaters_controller.rb:7:in `index'
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.4ms | Allocations: 2894)
+
+
+Started GET "/api/v1/skaters" for ::1 at 2020-08-08 22:05:12 -0600
+Processing by Api::V1::SkatersController#index as HTML
+  [1m[36mSkater Load (1.0ms)[0m  [1m[34mSELECT "skaters".* FROM "skaters"[0m
+  ↳ app/controllers/api/v1/skaters_controller.rb:7:in `index'
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 1.0ms | Allocations: 2894)
+
+
+Started GET "/api/v1/skaters" for ::1 at 2020-08-08 22:05:14 -0600
+Processing by Api::V1::SkatersController#index as HTML
+  [1m[36mSkater Load (0.2ms)[0m  [1m[34mSELECT "skaters".* FROM "skaters"[0m
+  ↳ app/controllers/api/v1/skaters_controller.rb:7:in `index'
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.2ms | Allocations: 2894)
+
+
+Started GET "/api/v1/skaters" for ::1 at 2020-08-08 22:05:24 -0600
+Processing by Api::V1::SkatersController#index as HTML
+  [1m[36mSkater Load (26.9ms)[0m  [1m[34mSELECT "skaters".* FROM "skaters"[0m
+  ↳ app/controllers/api/v1/skaters_controller.rb:7:in `index'
+Completed 200 OK in 31ms (Views: 3.7ms | ActiveRecord: 26.9ms | Allocations: 2894)
+
+
+Started GET "/api/v1/skaters" for ::1 at 2020-08-08 22:06:40 -0600
+Processing by Api::V1::SkatersController#index as HTML
+  [1m[36mSkater Load (3.2ms)[0m  [1m[34mSELECT "skaters".* FROM "skaters"[0m
+  ↳ app/controllers/api/v1/skaters_controller.rb:7:in `index'
+Completed 200 OK in 7ms (Views: 3.4ms | ActiveRecord: 3.2ms | Allocations: 2897)
+
+
+Started GET "/api/v1/skaters" for ::1 at 2020-08-08 22:06:48 -0600
+Processing by Api::V1::SkatersController#index as HTML
+  [1m[36mSkater Load (4.1ms)[0m  [1m[34mSELECT "skaters".* FROM "skaters"[0m
+  ↳ app/controllers/api/v1/skaters_controller.rb:7:in `index'
+Completed 200 OK in 6ms (Views: 1.9ms | ActiveRecord: 4.1ms | Allocations: 2894)
+
+
+Started GET "/api/v1/skaters" for ::1 at 2020-08-08 22:07:23 -0600
+Processing by Api::V1::SkatersController#index as HTML
+  [1m[36mSkater Load (0.5ms)[0m  [1m[34mSELECT "skaters".* FROM "skaters"[0m
+  ↳ app/controllers/api/v1/skaters_controller.rb:7:in `index'
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.5ms | Allocations: 2894)
+
+
+Started GET "/api/v1/skaters" for ::1 at 2020-08-08 22:10:51 -0600
+Processing by Api::V1::SkatersController#index as HTML
+  [1m[36mSkater Load (0.3ms)[0m  [1m[34mSELECT "skaters".* FROM "skaters"[0m
+  ↳ app/controllers/api/v1/skaters_controller.rb:7:in `index'
+Completed 200 OK in 38ms (Views: 31.4ms | ActiveRecord: 3.2ms | Allocations: 7657)
+
+
